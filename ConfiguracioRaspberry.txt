@@ -1,0 +1,14 @@
+Dades Raspberry
+    ip: mastertf25
+    Usuari: pi
+    Password: raspberry
+    mastertf25.local
+
+He activat SSH i la controlo remotament amb VNC (utilitzo versió 6.17 perquè és gratuïta)
+Veure que la càmera està bé i fer un preview durant 5 segons: rpicam-hello -t 5000
+Capturar una imatge des de Terminal: rpicam-jpeg -o imatge.jpg
+
+Per executar codi des de VSC:
+- Obrir VSC al Mac
+- Apretar el requadre verd a la part inferior esquerra
+- Sel·leccionar "Connect to host" i entrar pi@mastertf25.local
