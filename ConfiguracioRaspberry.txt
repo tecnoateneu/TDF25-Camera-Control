@@ -12,3 +12,4 @@ Per executar codi des de VSC:
 - Obrir VSC al Mac
 - Apretar el requadre verd a la part inferior esquerra
 - Sel·leccionar "Connect to host" i entrar pi@mastertf25.local
+- Obrir repositori la-dansa-dels-testos-RBPI
