@@ -29,29 +29,30 @@ def LlegeixImatgesCalibracio():
     # Si la tecla 's' és premuda, guarda la imatge amb el nom caliX.png
     # Si la tecla 'esc' és premuda, el programa s'atura
     num = 0
-    while True:
-        # Llegeix una imatge de la càmera
-        output = picam2.capture_array()                     # Captura la imatge 
-        output = cv2.cvtColor(output, cv2.COLOR_BGR2GRAY)   # Converteix la imatge a escala de grisos
+
+    try:
+        picam2.start_preview()
+        while True:
+            # Llegeix una imatge de la càmera
+            output = picam2.capture_array()                     # Captura la imatge 
+            output = cv2.cvtColor(output, cv2.COLOR_BGR2GRAY)   # Converteix la imatge a escala de grisos
   
-        # Mostra la imatge en una finestra
-        cv2.imshow('Imatge de la càmera', output)
+            # Espera que l'usuari premi una tecla
+            k = cv2.waitKey(1)
 
-        # Espera que l'usuari premi una tecla
-        k = cv2.waitKey(1)
+            # Si l'usuari ha premut la tecla 's', guarda la imatge
+            if k == ord('s'):
+                cv2.imwrite('Imatges/' + f'cali{num}.png', output)
+                num += 1
 
-        # Si l'usuari ha premut la tecla 's', guarda la imatge
-        if k == ord('s'):
-            cv2.imwrite('Imatges/' + f'cali{num}.png', output)
-            num += 1
+            # Si l'usuari ha premut la tecla 'esc', surt del bucle
+            elif k == 27:  # 27 és el codi ASCII per a la tecla 'esc'
+                break
 
-        # Si l'usuari ha premut la tecla 'esc', surt del bucle
-        elif k == 27:  # 27 és el codi ASCII per a la tecla 'esc'
-            break
-
-    # Allibera els recursos de la càmera i tanca les finestres d'OpenCV
-    picam2.release()
-    cv2.destroyAllWindows()
+    finally:
+        # Allibera els recursos de la càmera i tanca les finestres d'OpenCV
+        picam2.stop_preview()
+        cv2.destroyAllWindows()
 
 def main():
     LlegeixImatgesCalibracio()
