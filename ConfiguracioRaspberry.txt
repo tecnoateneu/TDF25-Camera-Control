@@ -13,9 +13,8 @@ Per executar codi des de VSC:
 - Apretar el requadre verd a la part inferior esquerra
 - Sel·leccionar "Connect to host" i entrar pi@mastertf25.local
 - Obrir repositori la-dansa-dels-testos-RBPI
-- He actualitzat la Raspberry:
-    sudo apt-get update
-    sudo apt-get upgrade
-- He instal·lat les llibreries de desenvolupament de la Raspberry
-    sudo apt-get install libraspberrypi-dev
+- Per activar l'entorn virtual Python:
+    source env311/bin/activate
+- Per desactivar l'entorn virtual Pyrhon:
+    source env311/bin/deactivate
     
