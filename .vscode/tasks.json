@@ -6,7 +6,7 @@
         {
             "label": "Create venv",
             "type": "shell",
-            "command": "python3.11 -m venv env311",
+            "command": "python3.11 -m venv --system-site-packages env311",
             "presentation": {
                 "reveal": "always"
             },
@@ -29,6 +29,18 @@
             "label": "Activate venv",
             "type": "shell",
             "command": "source env311/bin/activate && pip install --upgrade pip && pip install -r .vscode/requirements.txt",
+            "dependsOn": "Create venv",
+            "presentation": {
+                "reveal": "always"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Desactivar HDR càmera",
+            "type": "shell",
+            "command": "v4l2-ctl --set-ctrl wide_dynamic_range=0 -d /dev/v4l-subdev0",
             "dependsOn": "Create venv",
             "presentation": {
                 "reveal": "always"
