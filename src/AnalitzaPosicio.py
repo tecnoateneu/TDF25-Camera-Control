@@ -83,7 +83,7 @@ def LlegeixFotoCamera(camera):
 #          nom_fitxer: nom del fitxer
 def GuardaImatge(imatge, nom_fitxer):
     # Desa la imatge en un fitxer, afegint una marca de temps al nom del fitxer
-    marca_temps = datetime.datetime.now().strftime('_%Y%m%d_%H%M')
+    marca_temps = datetime.datetime.now().strftime('%Y%m%d_%H%M')
     if  not cv2.imwrite('Imatges/' + marca_temps + nom_fitxer + '.jpg', imatge):
         print('No s\'ha pogut guardar la imatge', nom_fitxer)
         return
@@ -516,10 +516,10 @@ def main():
     
     Camera = ActivaCamera()
     foto = LlegeixFotoCamera(Camera)
-    CampFlors = FlowerField()
-    AjustaLimitsCamp(CampFlors)
-    CampFlors.ObteCamp()
-    SegueixFlor(CampFlors)
+    #CampFlors = FlowerField()
+    #AjustaLimitsCamp(CampFlors)
+    #CampFlors.ObteCamp()
+    #SegueixFlor(CampFlors)
     #ComprovaPosicio(CampFlors)
      
    
