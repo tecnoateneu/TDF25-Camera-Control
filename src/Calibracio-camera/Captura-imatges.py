@@ -38,6 +38,8 @@ while True:
     if k == ord('s'): # Si l'usuari ha premut la tecla 's', guarda la imatge
         cv2.imwrite('Imatges/' + f'cali{num}.png', output)
         num += 1
+    elif k == ord('p'):
+        print(picam2.capture_metadata())
     elif k == 27:  # 27 és el codi ASCII per a la tecla 'esc'
         break
 cv2.destroyAllWindows()
