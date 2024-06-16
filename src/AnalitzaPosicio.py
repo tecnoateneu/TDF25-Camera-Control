@@ -5,12 +5,14 @@ import numpy as np
 import pickle   
 import time
 import os
-from picamera2 import Picamera2, Preview
+from picamera2 import Picamera2
+from libcamera import controls
 
 
 DEBUG = True
 LLEGEIX_CAMERA = True
-CAMERA_USED = 'TPTEK' # Used camera. Possible values: 'TPTEK'
+CAMERA_USED = 'RBPI' # Used camera. Possible values: 'TPTEK', 'RBPI'
+
 REDUCCIO_REFERENCIES = 10 # Pixels to reduce the field limits for avoiding the external references
 
 MIDA_CAMP_X = 2360
@@ -40,7 +42,8 @@ def ActivaCamera():
     if LLEGEIX_CAMERA:
         try:
             picam2 = Picamera2()
-            camera_config = picam2.create_still_configuration(main={"size": (4608, 2592)}, lores={"size": (640, 480)}, display="lores")
+            camera_config = picam2.create_still_configuration(main={'format': 'BGR888', 'size': (4608, 2592)})
+            picam2.set_controls({"AfMode":controls.AfModeEnum.Continuous})
             picam2.configure(camera_config)
             picam2.start()
         except IOError:
@@ -64,10 +67,14 @@ def LlegeixFotoCamera(camera):
     global ImatgeCounter
 
     if LLEGEIX_CAMERA:
+        while not (camera.autofocus_cycle()):               #Esperem a que càmera estigui enfocada
+            print('Càmera no enfoca\n')
+            time.sleep(0.1)
+
         output = camera.capture_array()                     # Captura la imatge 
         output = cv2.cvtColor(output, cv2.COLOR_BGR2GRAY)   # Converteix la imatge a escala de grisos
     else:
-        output = ObreImatge('Imatges/ImatgeCamera999.jpg')
+        output = ObreImatge('src/Imatges/ImatgeCamera999.jpg')
     
     if DEBUG:
         if ImatgeCounter < 10:
@@ -84,8 +91,8 @@ def LlegeixFotoCamera(camera):
 def GuardaImatge(imatge, nom_fitxer):
     # Desa la imatge en un fitxer, afegint una marca de temps al nom del fitxer
     marca_temps = datetime.datetime.now().strftime('%Y%m%d_%H%M')
-    if  not cv2.imwrite('Imatges/' + marca_temps + nom_fitxer + '.jpg', imatge):
-        print('No s\'ha pogut guardar la imatge', nom_fitxer)
+    if  not cv2.imwrite('src/Imatges/' + marca_temps + nom_fitxer + '.jpg', imatge):
+        print('GuardaImatge: No s\'ha pogut guardar la imatge', nom_fitxer)
         return
     
 
@@ -516,6 +523,7 @@ def main():
     
     Camera = ActivaCamera()
     foto = LlegeixFotoCamera(Camera)
+    GuardaImatge(foto,'Prova' )
     #CampFlors = FlowerField()
     #AjustaLimitsCamp(CampFlors)
     #CampFlors.ObteCamp()
