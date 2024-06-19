@@ -10,7 +10,7 @@ import time
 picam2 = Picamera2()
 camera_config = picam2.create_still_configuration(main={'format': 'BGR888', 'size': (4608, 2592)})
 #picam2.set_controls({"AfMode":controls.AfModeEnum.Continuous})         # Autofocus
-picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":10.0})
+picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":0.0})
 picam2.configure(camera_config)
 picam2.start()
 time.sleep(2)

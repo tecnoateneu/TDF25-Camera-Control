@@ -11,7 +11,7 @@ from libcamera import controls
 
 DEBUG = True
 LLEGEIX_CAMERA = True
-CAMERA_USED = 'RBPI' # Used camera. Possible values: 'TPTEK', 'RBPI'
+FOCUS = 0.0
 
 REDUCCIO_REFERENCIES = 10 # Pixels to reduce the field limits for avoiding the external references
 
@@ -43,7 +43,7 @@ def ActivaCamera():
         try:
             picam2 = Picamera2()
             camera_config = picam2.create_still_configuration(main={'format': 'BGR888', 'size': (4608, 2592)})
-            picam2.set_controls({"AfMode":controls.AfModeEnum.Continuous})
+            picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":FOCUS})
             picam2.configure(camera_config)
             picam2.start()
         except IOError:
@@ -67,10 +67,6 @@ def LlegeixFotoCamera(camera):
     global ImatgeCounter
 
     if LLEGEIX_CAMERA:
-        while not (camera.autofocus_cycle()):               #Esperem a que càmera estigui enfocada
-            print('Càmera no enfoca\n')
-            time.sleep(0.1)
-
         output = camera.capture_array()                     # Captura la imatge 
         output = cv2.cvtColor(output, cv2.COLOR_BGR2GRAY)   # Converteix la imatge a escala de grisos
     else:
@@ -149,10 +145,7 @@ def CorregeixImatge(imatge, cameraMatrix, dist):
     # retalla la imatge
     x, y, w, h = roi
 
-    if CAMERA_USED == 'TPTEK':
-        dst = dst[y + 20:y+h, x:x+w] # Eliminem completament el text de la càmera
-    else:
-        dst = dst[y:y+h, x:x+w]
+    dst = dst[y:y+h, x:x+w]
 
     if DEBUG:
         if ImatgeCounter < 10:
@@ -177,10 +170,6 @@ class FlowerField:
     # Entrada: imatge: ruta de la imatge sense distorsió
     #          imatge_umbralitzada: imatge umbralitzada
     def ObteCamp(self):
-        # Carrega les dades de calibració de la càmera
-        cameraMatrix = pickle.load(open('Software/Calibracio-camera/cameraMatrix.pkl', 'rb'))
-        dist = pickle.load(open('Software/Calibracio-camera/dist.pkl', 'rb'))
-
         cap = ActivaCamera()  
         
         imatge = LlegeixFotoCamera(cap)   
