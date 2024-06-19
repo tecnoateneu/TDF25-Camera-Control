@@ -13,8 +13,13 @@ DEBUG = True
 LLEGEIX_CAMERA = True
 FOCUS = 0.0
 
-REDUCCIO_REFERENCIES = 10 # Pixels to reduce the field limits for avoiding the external references
+# Limits del camp de flors en píxels
+DOWN_LEFT = (100, 2500)
+DOWN_RIGHT = (4500, 2500)
+UP_LEFT = (100, 100)
+UP_RIGHT = (4500, 100)
 
+# Mida real del camp de flors en mm
 MIDA_CAMP_X = 2360
 MIDA_CAMP_Y = 1310
 
@@ -31,7 +36,7 @@ def ObreImatge(ruta_imatge):
 
     # Comprova si s'ha llegit correctament la imatge
     if imatge is None:
-        print('ObreImatge: No s\'ha pogut obrir el fitxer', ruta_imatge)
+        LogError('ObreImatge: No s\'ha pogut obrir el fitxer', ruta_imatge)
         return
     
     return imatge 
@@ -47,13 +52,13 @@ def ActivaCamera():
             picam2.configure(camera_config)
             picam2.start()
         except IOError:
-            print("ActivaCamera: No s'ha pogut obrir o accedir a la càmera.")
+            LogError("ActivaCamera: No s'ha pogut obrir o accedir a la càmera.")
         except ValueError:
-            print("ActivaCamera: S'han proporcionat paràmetres no vàlids a create_still_configuration o configure.")
+            LogError("ActivaCamera: S'han proporcionat paràmetres no vàlids a create_still_configuration o configure.")
         except RuntimeError:
-            print("ActivaCamera: S'ha cridat a start quan la càmera ja està en ús o no està configurada correctament.")
+            LogError("ActivaCamera: S'ha cridat a start quan la càmera ja està en ús o no està configurada correctament.")
         except Exception as e:
-            print(f"ActivaCamera: S'ha produït un error inesperat: {str(e)}")
+            LogError(f"ActivaCamera: S'ha produït un error inesperat: {str(e)}")
         time.sleep(2)
 
         return picam2
@@ -88,7 +93,7 @@ def GuardaImatge(imatge, nom_fitxer):
     # Desa la imatge en un fitxer, afegint una marca de temps al nom del fitxer
     marca_temps = datetime.datetime.now().strftime('%Y%m%d_%H%M')
     if  not cv2.imwrite('src/Imatges/' + marca_temps + nom_fitxer + '.jpg', imatge):
-        print('GuardaImatge: No s\'ha pogut guardar la imatge', nom_fitxer)
+        LogError('GuardaImatge: No s\'ha pogut guardar la imatge', nom_fitxer)
         return
     
 
@@ -97,6 +102,8 @@ def GuardaImatge(imatge, nom_fitxer):
 # Entrada: frame: imatge 
 # Sortida: img_thresolded: imatge amb threshold
 def ThresholdImatge(frame):
+    global ImatgeCounter
+
     # Si la imatge no està en escala de grisos, la converteix
     if len(frame.shape) > 2:
         # Converteix la imatge a escala de grisos
@@ -104,138 +111,25 @@ def ThresholdImatge(frame):
 
     # Realitza el thresholding
     
-    _, thresholded = cv2.threshold(frame, 250, 255, cv2.THRESH_BINARY)
+    _, img_thresholded = cv2.threshold(frame, 250, 255, cv2.THRESH_BINARY)
 
     if DEBUG:
         if ImatgeCounter < 10:
             # Guarda imatge llegida a disk
             NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeThresolded'
-            GuardaImatge(output, NomImatge)
+            GuardaImatge(img_thresholded, NomImatge)
             ImatgeCounter += 1
 
     return img_thresholded 
-
-# Funció per corregir la distorsió d'una imatge
-# Entrada: imatge: imatge per corregir
-#          cameraMatrix: matriu de la càmera
-#          dist: coeficients de distorsió
-#          newCameraMatrix: nova matriu de la càmera
-#          roi: regió d'interès
-#          w: amplada de la imatge
-#          h: alçada de la imatge
-# Sortida: dst: imatge sense distorsió i retallada
-def CorregeixImatge(imatge, cameraMatrix, dist):
-    h,  w = imatge.shape[:2]
-    newCameraMatrix, roi = cv2.getOptimalNewCameraMatrix(cameraMatrix, dist, (w,h), 1, (w,h))
-    
-    # Desdistorsiona la imatge
-    dst = cv2.undistort(imatge, cameraMatrix, dist, None, newCameraMatrix)
-    
-    # Desdistorsiona amb Remapping
-    #mapx, mapy = cv2.initUndistortRectifyMap(cameraMatrix, dist, None, newCameraMatrix, (w,h), 5)
-    #dst = cv2.remap(imatge, mapx, mapy, cv2.INTER_LINEAR)
-    
-    if DEBUG:
-        if ImatgeCounter < 10:
-            # Guarda imatge llegida a disk
-            NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeNoDistorsio'
-            GuardaImatge(output, NomImatge)
-            ImatgeCounter += 1
-
-    # retalla la imatge
-    x, y, w, h = roi
-
-    dst = dst[y:y+h, x:x+w]
-
-    if DEBUG:
-        if ImatgeCounter < 10:
-            # Guarda imatge llegida a disk
-            NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeNoRetallada'
-            GuardaImatge(output, NomImatge)
-            ImatgeCounter += 1
-
-    return dst
 
 ################################################ Anàlisis inatge ################################################
 # Classe que defineix el camp de les flors
 class FlowerField:
     def __init__(self):
-        self.left_up = (0,0) # Cantó superior esquerre del camp en píxels
-        self.right_up = (0,0) # Cantó superior dret del camp en píxels
-        self.left_down = (0,0) # Cantó inferior esquerre del camp en píxels
-        self.right_down = (0,0) # Cantó inferior dret del camp en píxels
-        self.image_size = (0,0) # Mida de la pantalla en píxels
-
-    # Troba els límits del camp. El camp està limitat per 4 referències blanques
-    # Entrada: imatge: ruta de la imatge sense distorsió
-    #          imatge_umbralitzada: imatge umbralitzada
-    def ObteCamp(self):
-        cap = ActivaCamera()  
-        
-        imatge = LlegeixFotoCamera(cap)   
-        imatge_corregida = CorregeixImatge(imatge, cameraMatrix, dist)
-        imatge_umbralitzada = ThresholdImatge(imatge_corregida)
-        # Troba els contorns
-        contorns, _ = cv2.findContours(imatge_umbralitzada, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE) 
-    
-        if DEBUG:
-            print('Nombre de contorns trobats:', len(contorns))
-            # Imprimeix la mida de cada contorn
-            contorns_trobats = list(contorns)
-            # Ordena per mida
-            contorns_trobats.sort(key=cv2.contourArea, reverse=True)
-            print('Àrea dels contorns trobats:')
-            for contorn in contorns_trobats:
-                # Imprimeix la mida del contorn si és més gran que 0
-                if cv2.contourArea(contorn) > 0:
-                    print(cv2.contourArea(contorn))
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
-
-        # Filtra els contorns per àrea, mantenint només els grans
-        contorns = [contorn for contorn in contorns if cv2.contourArea(contorn) > 90]
-
-        # Troba els 4 contorns que delimiten el camp
-        # Troba els centres
-        centres = []
-        for contorn in contorns:
-            M = cv2.moments(contorn)
-            if M['m00'] != 0:
-                cx = int(M['m10']/M['m00'])
-                cy = int(M['m01']/M['m00'])
-                centres.append((cx, cy))
-                cv2.circle(imatge, (cx, cy), 5, (128, 128, 128), -1)
-
-        # Troba el centre superior esquerre 
-        distancia_a_0 = [math.sqrt(x**2 + y**2) for (x, y) in centres]
-        self.left_up = centres[distancia_a_0.index(min(distancia_a_0))]
-
-        # Troba el centre superior dret
-        distancia_a_x = [math.sqrt((imatge.shape[1]-x)**2 + y**2) for (x, y) in centres]
-        self.right_up = centres[distancia_a_x.index(min(distancia_a_x))]
-
-        # Troba el centre inferior esquerre
-        distancia_a_y = [math.sqrt(x**2 + (imatge.shape[0]-y)**2) for (x, y) in centres]
-        self.left_down = centres[distancia_a_y.index(min(distancia_a_y))]
-
-        # Troba el centre inferior dret
-        distancia_a_xy = [math.sqrt((imatge.shape[1]-x)**2 + (imatge.shape[0]-y)**2) for (x, y) in centres]
-        self.right_down = centres[distancia_a_xy.index(min(distancia_a_xy))]
-  
-        if DEBUG:
-            # Dibuixa un cercle gris en el centre de cada referència
-            cv2.circle(imatge_corregida, (self.left_down), 5, (128, 128, 128), -1)
-            cv2.circle(imatge_corregida, (self.right_up), 5, (128, 128, 128), -1)
-            cv2.circle(imatge_corregida, (self.left_up), 5, (128, 128, 128), -1)
-            cv2.circle(imatge_corregida, (self.right_down), 5, (128, 128, 128), -1)
-            cv2.imshow('Imatge amb Límits del camp', imatge_corregida)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
-
-        # Actualitza la mida de la imatge
-        self.image_size = imatge_corregida.shape
-        
-        return
+        self.left_up = UP_LEFT # Cantó superior esquerre del camp en píxels
+        self.right_up = UP_RIGHT # Cantó superior dret del camp en píxels
+        self.left_down = DOWN_LEFT # Cantó inferior esquerre del camp en píxels
+        self.right_down = DOWN_RIGHT # Cantó inferior dret del camp en píxels
     
 def PixelXY2ReallXY(self, px, py):
     # A la càmera, el camp de flors està limitat per 4 línies, línia esquerra, línia dreta, línia superior i línia inferior
@@ -273,33 +167,20 @@ def PixelXY2ReallXY(self, px, py):
 
     return x, y
 
-# Funció per ajudar a ajustar els límits del camp. S'ha d'executar amb DEBUG = True i mostra contínuament la imatge del camp
-# Entrada: CampFlors: objecte FlowerField
-# Sortida: cap
-def AjustaLimitsCamp(CampFlors):
-
-    if not DEBUG:
-        print('AjustaLimitsCamp: Només té sentit executar aquesta funció amb DEBUG = True')
-        return
-       
-    while True:
-        CampFlors.ObteCamp()
-        k = cv2.waitKey(0)
-        if k == 27:
-            break  
-
 # Funció per trobar la posició d'una flor a la imatge
 # S'espera trobar només una flor
 # Entrada: imatge: imatge per analitzar
-#          CampFlors: objecte FlowerField ja calibrat (ObteCamp executat)
+#          CampFlors: objecte FlowerField 
 # Sortida: middle_point: coordenades de pantalla del punt mig entre els dos centres
 #                       (0,0),0,0 si no es troba la flor
 def TrobaPosicioFlor(imatge, CampFlors):
-    # Redueix els límits del camp per evitar les referències externes
-    xmin = max(CampFlors.left_up[0], CampFlors.left_down[0]) + REDUCCIO_REFERENCIES
-    xmax = min(CampFlors.right_up[0], CampFlors.right_down[0]) - REDUCCIO_REFERENCIES
-    ymin = max(CampFlors.left_up[1], CampFlors.right_up[1]) + REDUCCIO_REFERENCIES
-    ymax = min(CampFlors.left_down[1], CampFlors.right_down[1]) - REDUCCIO_REFERENCIES
+    global ImatgeCounter
+
+    # Redueix els límits del camp per ajustar-nos al camp
+    xmin = max(CampFlors.left_up[0], CampFlors.left_down[0])
+    xmax = min(CampFlors.right_up[0], CampFlors.right_down[0])
+    ymin = max(CampFlors.left_up[1], CampFlors.right_up[1])
+    ymax = min(CampFlors.left_down[1], CampFlors.right_down[1])
 
     # Redueix la imatge
     imager = imatge[ymin:ymax, xmin:xmax]
@@ -323,13 +204,15 @@ def TrobaPosicioFlor(imatge, CampFlors):
         # Dibuixa un cercle gris en cada centre
         for centre in centres:
             cv2.circle(imager, centre, 5, (128, 128, 128), -1)
-        cv2.imshow('Imatge amb Contorns trobats', imager)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        if ImatgeCounter < 10:
+            # Guarda imatge llegida a disk
+            NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgePosicioFlor'
+            GuardaImatge(imager, NomImatge)
+            ImatgeCounter += 1
 
-    # Si es troben més de 2 centres, imprimeix un missatge d'error
-    if len(centres) > 2 or len(centres) < 2:
-        print('TrobaPosicioFlor: S\'han trobat més de 2 referències')
+    # Si es troben més de 3 centres, imprimeix un missatge d'error
+    if len(centres) > 3 or len(centres) < 3:
+        LogError('TrobaPosicioFlor: No s\'han trobat 3 referències')
         # Desa la imatge 
         #GuardaImatge(imatge, 'Software/Lector-posicio/Data/ErrorReferences')
         return (0,0),0,0
@@ -343,10 +226,11 @@ def TrobaPosicioFlor(imatge, CampFlors):
     if DEBUG:
         # Dibuixa un cercle gris al punt mig
         cv2.circle(imager, middle_point, 5, (128, 128, 128), -1)
-        cv2.imshow('Imatge amb posicio flor', imager)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
-    
+        if ImatgeCounter < 10:
+            # Guarda imatge llegida a disk
+            NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgePosicioFlor'
+            GuardaImatge(imager, NomImatge)
+            ImatgeCounter += 1    
     # Obté l'angle entre la línia que uneix els dos centres i l'eix y
     try:
         angle = math.atan((centres[1][0]-centres[0][0])/(centres[1][1]-centres[0][1]))
@@ -386,28 +270,25 @@ def DibuixaPosicioFlor(imatge, x, y, angle):
 # També mostra les coordenades x, y i l'angle de la flor
 # Si l'usuari prem 's' guarda les imatges original, corregida, binaritzada i de posició
 # Si l'usuari prem 'esc' tanca la càmera
-# Entrada: Camp: objecte FlowerField ja calibrat (ObteCamp executat)
+# Entrada: Camp: objecte FlowerField 
+#          camera: objecte Picamera2 activada
 # Sortida: cap
-def SegueixFlor(CampFlors):
-    # Carrega les dades de calibració de la càmera
-    cameraMatrix = pickle.load(open('Software/Calibracio-camera/cameraMatrix.pkl', 'rb'))
-    dist = pickle.load(open('Software/Calibracio-camera/dist.pkl', 'rb'))
-
-    cap = ActivaCamera()  
+def SegueixFlor(CampFlors, camera):
     
     while True:
-        imatge = LlegeixFotoCamera(cap)
+        imatge = LlegeixFotoCamera(camera)
                 
-        imatgec = CorregeixImatge(imatge, cameraMatrix, dist)
-        imatget = ThresholdImatge(imatgec)
+        imatget = ThresholdImatge(imatge)
         
         Posicio, Distancia, Angle = TrobaPosicioFlor(imatget, CampFlors)
 
         font = cv2.FONT_HERSHEY_SIMPLEX
         if (Posicio[0] == 0 and Posicio[1] == 0 and Distancia == 0 and Angle == 0):
             # No s'ha trobat la flor
-            cv2.putText(imatgec, 'No s\'ha trobat flor', (50, 60), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
-            cv2.imshow('Imatge sense posicio', imatgec)
+            cv2.putText(imatget, 'No s\'ha trobat flor', (50, 60), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
+            # Guarda imatge llegida a disk
+            NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeNoFlorTrobada'
+            GuardaImatge(imatget, NomImatge)
         else:
             # Dibuixa la posició de la flor
             imager = DibuixaPosicioFlor(imatgec, Posicio[0], Posicio[1], Angle)
@@ -438,7 +319,7 @@ def SegueixFlor(CampFlors):
     cv2.destroyAllWindows()  
 
 # Per moure un cercle a la pantalla utilitzant el teclat i comprovar quina és la posició real calculada, per veure si coincideix amb la posició real
-# Entrada: CampFlors: objecte FlowerField ja calibrat (ObteCamp executat)
+# Entrada: CampFlors: objecte FlowerField ja calibrat 
 # Sortida: cap (pantalla)
 def ComprovaPosicio(CampFlors):
     # Carrega les dades de calibració de la càmera
@@ -506,17 +387,20 @@ def ComprovaPosicio(CampFlors):
     if cap:
         cap.release()
     cv2.destroyAllWindows()  
+################################################ Utilitats ################################################
+# Funció que crea un log d'errors. Afegeix l'error passat al fitxer de log posant la data i hora
+# Entrada: error: missatge d'error
+def LogError(error):
+    data = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    with open('src/Data/LogErrors.txt', 'a') as f:
+        f.write(data + ' ' + error + '\n')
 
 ################################################ Funció principal ################################################
 def main():
     
     Camera = ActivaCamera()
-    foto = LlegeixFotoCamera(Camera)
-    GuardaImatge(foto,'Prova' )
-    #CampFlors = FlowerField()
-    #AjustaLimitsCamp(CampFlors)
-    #CampFlors.ObteCamp()
-    #SegueixFlor(CampFlors)
+    CampFlors = FlowerField()
+    SegueixFlor(CampFlors, Camera)
     #ComprovaPosicio(CampFlors)
      
    
