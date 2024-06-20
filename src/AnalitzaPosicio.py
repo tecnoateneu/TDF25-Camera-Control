@@ -217,30 +217,43 @@ def TrobaPosicioFlor(imatge, CampFlors):
         #GuardaImatge(imatge, 'Software/Lector-posicio/Data/ErrorReferences')
         return (0,0),0,0
     
-    # Calcula la distància entre els dos centres
-    distancia = math.sqrt((centres[0][0]-centres[1][0])**2 + (centres[0][1]-centres[1][1])**2)
+    # Troba quins són els 2 centres més propers
+    min_dist = 10000
+    for i in range(2):
+        for j in range(i+1, 3):
+            dist = math.sqrt((centres[i][0]-centres[j][0])**2 + (centres[i][1]-centres[j][1])**2)
+            if dist < min_dist:
+                min_dist = dist
+                centres_mes_propers = [i, j]
 
-    # Obté les coordenades del punt mig entre els dos centres
-    middle_point = ((centres[0][0]+centres[1][0])//2, (centres[0][1]+centres[1][1])//2)
+    # Troba el punt mig entre els dos centres mes propers
+    punt_mig = ((centres[centres_mes_propers[0]][0]+centres[centres_mes_propers[1]][0])//2, (centres[centres_mes_propers[0]][1]+centres[centres_mes_propers[1]][1])//2)
 
+    # Troba el punt mig entre punt_mig i el tercer centre
+    centre_flor = ((punt_mig[0]+centres[3-centres_mes_propers[0]-centres_mes_propers[1]][0])//2, (punt_mig[1]+centres[3-centres_mes_propers[0]-centres_mes_propers[1]][1])//2)
+
+    # Troba la distància entre punt_mig i el tercer centre
+    distancia = math.sqrt((centres[3-centres_mes_propers[0]-centres_mes_propers[1]][0]-punt_mig[0])**2 + (centres[3-centres_mes_propers[0]-centres_mes_propers[1]][1]-punt_mig[1])**2)
+
+    # Troba l'angle de la línia que uneix punt_mig i el tercer centre
+    try:
+        angle = math.atan((centres[3-centres_mes_propers[0]-centres_mes_propers[1]][0]-punt_mig[0])/(centres[3-centres_mes_propers[0]-centres_mes_propers[1]][1]-punt_mig[1]))
+    except ZeroDivisionError:
+        angle = 0
+    
     if DEBUG:
         # Dibuixa un cercle gris al punt mig
-        cv2.circle(imager, middle_point, 5, (128, 128, 128), -1)
+        cv2.circle(imager, centre_flor, 5, (128, 128, 128), -1)
         if ImatgeCounter < 10:
             # Guarda imatge llegida a disk
             NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgePosicioFlor'
             GuardaImatge(imager, NomImatge)
             ImatgeCounter += 1    
-    # Obté l'angle entre la línia que uneix els dos centres i l'eix y
-    try:
-        angle = math.atan((centres[1][0]-centres[0][0])/(centres[1][1]-centres[0][1]))
-    except ZeroDivisionError:
-        angle = 0
     
-    # S'afegeix el que s'ha retallat al principi per eliminar les referències externes
-    middle_point = (middle_point[0] + xmin, middle_point[1] + ymin)
-
-    return middle_point, distancia, angle
+    # S'afegeix el que s'ha retallat al principi per limitar el camp
+    centre_flor = (centre_flor[0] + xmin, centre_flor[1] + ymin)
+    
+    return centre_flor, distancia, angle
 
 # Dibuixa un cercle al punt mig i una línia a la inclinació de la flor
 # Entrada: imatge: imatge per dibuixar
@@ -249,6 +262,8 @@ def TrobaPosicioFlor(imatge, CampFlors):
 #          angle: inclinació de la flor
 # Sortida: imatge: imatge amb el cercle i la línia dibuixats
 def DibuixaPosicioFlor(imatge, x, y, angle):
+    global ImatgeCounter
+
     # Dibuixa un cercle al punt mig
     cv2.circle(imatge, (x, y), 100, (255, 255, 255), 2)
 
@@ -258,9 +273,11 @@ def DibuixaPosicioFlor(imatge, x, y, angle):
     cv2.line(imatge, (x, y), (x2, y2), (255, 255, 255), 2)
     
     if DEBUG:
-        cv2.imshow('Imatge amb dibuix posicio flor', imatge)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        if ImatgeCounter < 10:
+            # Guarda imatge llegida a disk
+            NomImatge = str(ImatgeCounter).zfill(3) + 'FlorDibuixada'
+            GuardaImatge(imatge, NomImatge)
+            ImatgeCounter += 1 
     
     return imatge
 
@@ -289,9 +306,10 @@ def SegueixFlor(CampFlors, camera):
             # Guarda imatge llegida a disk
             NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeNoFlorTrobada'
             GuardaImatge(imatget, NomImatge)
+            LogError('Flor no trobada')
         else:
             # Dibuixa la posició de la flor
-            imager = DibuixaPosicioFlor(imatgec, Posicio[0], Posicio[1], Angle)
+            imager = DibuixaPosicioFlor(imatge, Posicio[0], Posicio[1], Angle)
             PosicioReal = CampFlors.PixelXY2ReallXY(Posicio[0], Posicio[1])
             cv2.putText(imager, 'X: ' + str(int(PosicioReal[0])), (50, 80), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
             cv2.putText(imager, 'Y: ' + str(int(PosicioReal[1])), (50, 160), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
