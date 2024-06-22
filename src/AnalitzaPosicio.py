@@ -36,7 +36,7 @@ def ObreImatge(ruta_imatge):
 
     # Comprova si s'ha llegit correctament la imatge
     if imatge is None:
-        LogError('ObreImatge: No s\'ha pogut obrir el fitxer', ruta_imatge)
+        LogError('ObreImatge: No s\'ha pogut obrir el fitxer' + ruta_imatge)
         return
     
     return imatge 
@@ -60,14 +60,27 @@ def ActivaCamera():
         except Exception as e:
             LogError(f"ActivaCamera: S'ha produït un error inesperat: {str(e)}")
         time.sleep(2)
-
+        while not (picam2.autofocus_cycle()):              # Espera a càmera enfocada
+            print('Càmera desenfocada')
+            time.sleep(0.1)
         return picam2
     else:
         return None
+
+# Funció per desactivar la càmera
+# Entrada: Objecte Picam2
+# Sortida: cap
+def DesactivaCamera(camera):
+    # Comprova si la càmera està activada
+    if camera is not None:
+        try:
+            camera.stop()
+        except Exception as e:
+            LogError(f"DesactivaCamera: S'ha produït un error inesperat: {str(e)}")
     
 # Funció per llegir un fotograma de la càmera
 # Entrada: Objecte Picam2
-# Sortida: fotograma en rgb llegit de la càmera
+# Sortida: fotograma en bgr llegit de la càmera
 def LlegeixFotoCamera(camera):
     global ImatgeCounter
 
@@ -93,7 +106,7 @@ def GuardaImatge(imatge, nom_fitxer):
     # Desa la imatge en un fitxer, afegint una marca de temps al nom del fitxer
     marca_temps = datetime.datetime.now().strftime('%Y%m%d_%H%M')
     if  not cv2.imwrite('src/Imatges/' + marca_temps + nom_fitxer + '.jpg', imatge):
-        LogError('GuardaImatge: No s\'ha pogut guardar la imatge', nom_fitxer)
+        LogError('GuardaImatge: No s\'ha pogut guardar la imatge' + nom_fitxer)
         return
     
 
@@ -313,6 +326,8 @@ def SegueixFlor(CampFlors, camera):
             NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeNoFlorTrobada'
             GuardaImatge(imatget, NomImatge)
             LogError('Flor no trobada')
+            if not DEBUG:
+                cv2.imshow('Imatge sense flor', imatget)
         else:
             # Dibuixa la posició de la flor
             imager = DibuixaPosicioFlor(imatge, Posicio[0], Posicio[1], Angle)
@@ -420,10 +435,13 @@ def LogError(error):
 
 ################################################ Funció principal ################################################
 def main():
+    # Definim el directori de treball perque sigui el mateix tant si treballem des del VSC com VNC
+    os.chdir('/home/pi/Documents/TDF25-Camera-Control')
     
     Camera = ActivaCamera()
     CampFlors = FlowerField()
     SegueixFlor(CampFlors, Camera)
+    DesactivaCamera(Camera)
     #ComprovaPosicio(CampFlors)
      
    

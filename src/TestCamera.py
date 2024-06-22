@@ -41,8 +41,7 @@ while True:
 
     cv2.imshow('Imatge', output)
     picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":focus})
-    picam2.configure(camera_config)
-
+    
     # Espera que l'usuari premi una tecla
     k = cv2.waitKey(1)
     if k == 27:  # 27 és el codi ASCII per a la tecla 'esc'
@@ -56,7 +55,10 @@ while True:
         focus = focus + 0.01
     elif k == ord('s'):
         focus = focus - 0.01
+    if focus < 0:
+        focus = 0
     # Arrodoneix a 2 decimals
     focus = round(focus, 2)
 
 cv2.destroyAllWindows()
+picam2.stop()
