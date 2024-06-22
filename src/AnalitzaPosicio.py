@@ -14,14 +14,14 @@ LLEGEIX_CAMERA = True
 FOCUS = 0.0
 
 # Limits del camp de flors en píxels
-DOWN_LEFT = (100, 2500)
-DOWN_RIGHT = (4500, 2500)
-UP_LEFT = (100, 100)
-UP_RIGHT = (4500, 100)
+DOWN_LEFT = (60, 2500)
+DOWN_RIGHT = (4460, 2515)
+UP_LEFT = (10, 160)
+UP_RIGHT = (4470, 130)
 
 # Mida real del camp de flors en mm
-MIDA_CAMP_X = 2360
-MIDA_CAMP_Y = 1310
+MIDA_CAMP_X = 2000
+MIDA_CAMP_Y = 1065
 
 ImatgeCounter = 0
 
@@ -131,41 +131,46 @@ class FlowerField:
         self.left_down = DOWN_LEFT # Cantó inferior esquerre del camp en píxels
         self.right_down = DOWN_RIGHT # Cantó inferior dret del camp en píxels
     
-def PixelXY2ReallXY(self, px, py):
-    # A la càmera, el camp de flors està limitat per 4 línies, línia esquerra, línia dreta, línia superior i línia inferior
-    # Cada línia està definida pels seus punts (left_up, left_down, right_up, right_down)
-    # Coneixem la mida real del camp, així que la posició real és proporcional a la distància a les línies
-    # Obté una equació de línia des de left_up fins a right_up
-    m_up = (self.right_up[1] - self.left_up[1])/(self.right_up[0] - self.left_up[0])
-    n_up = self.left_up[1] - m_up*self.left_up[0]
+    # Funció que retorna la posició real d'una flor a partir de les seves coordenades de la càmera
+    # Entrada: px: coordenada x de la càmera
+    #          py: coordenada y de la càmera
+    # Sortida: x: coordenada x real
+    #          y: coordenada y real
+    def PixelXY2ReallXY(self, px, py):
+        # A la càmera, el camp de flors està limitat per 4 línies, línia esquerra, línia dreta, línia superior i línia inferior
+        # Cada línia està definida pels seus punts (left_up, left_down, right_up, right_down)
+        # Coneixem la mida real del camp, així que la posició real és proporcional a la distància a les línies
+        # Obté una equació de línia des de left_up fins a right_up
+        m_up = (self.right_up[1] - self.left_up[1])/(self.right_up[0] - self.left_up[0])
+        n_up = self.left_up[1] - m_up*self.left_up[0]
 
-    # Obté una equació de línia des de left_up fins a left_down
-    m_left = (self.left_down[1] - self.left_up[1])/(self.left_down[0] - self.left_up[0])
-    n_left = self.left_up[1] - m_left*self.left_up[0]
+        # Obté una equació de línia des de left_up fins a left_down
+        m_left = (self.left_down[1] - self.left_up[1])/(self.left_down[0] - self.left_up[0])
+        n_left = self.left_up[1] - m_left*self.left_up[0]
 
-    # Obté una equació de línia des de right_up fins a right_down
-    m_right = (self.right_down[1] - self.right_up[1])/(self.right_down[0] - self.right_up[0])
-    n_right = self.right_up[1] - m_right*self.right_up[0]
+        # Obté una equació de línia des de right_up fins a right_down
+        m_right = (self.right_down[1] - self.right_up[1])/(self.right_down[0] - self.right_up[0])
+        n_right = self.right_up[1] - m_right*self.right_up[0]
 
-    # Obté una equació de línia des de left_down fins a right_down
-    m_down = (self.right_down[1] - self.left_down[1])/(self.right_down[0] - self.left_down[0])
-    n_down = self.left_down[1] - m_down*self.left_down[0]
+        # Obté una equació de línia des de left_down fins a right_down
+        m_down = (self.right_down[1] - self.left_down[1])/(self.right_down[0] - self.left_down[0])
+        n_down = self.left_down[1] - m_down*self.left_down[0]
 
-    # Distància des de la línia esquerra al punt
-    d_left = px - ((py - n_left) / m_left)
-    # Distància de la línia dreta al punt
-    d_right = ((py - n_right) / m_right) - px
-    # Escala al món real
-    x = (d_left * MIDA_CAMP_X) / (d_left + d_right)
+        # Distància des de la línia esquerra al punt
+        d_left = px - ((py - n_left) / m_left)
+        # Distància de la línia dreta al punt
+        d_right = ((py - n_right) / m_right) - px
+        # Escala al món real
+        x = (d_left * MIDA_CAMP_X) / (d_left + d_right)
 
-    # Distància de la línia superior al punt
-    d_up = py - ((m_up * px) + n_up)
-    # Distància de la línia inferior al punt
-    d_down = ((m_down * px) + n_down) - py
-    # Escala al món real
-    y = (d_up * MIDA_CAMP_Y) / (d_up + d_down)
+        # Distància de la línia superior al punt
+        d_up = py - ((m_up * px) + n_up)
+        # Distància de la línia inferior al punt
+        d_down = ((m_down * px) + n_down) - py
+        # Escala al món real
+        y = (d_up * MIDA_CAMP_Y) / (d_up + d_down)
 
-    return x, y
+        return x, y
 
 # Funció per trobar la posició d'una flor a la imatge
 # S'espera trobar només una flor
@@ -291,6 +296,7 @@ def DibuixaPosicioFlor(imatge, x, y, angle):
 #          camera: objecte Picamera2 activada
 # Sortida: cap
 def SegueixFlor(CampFlors, camera):
+    global ImatgeCounter
     
     while True:
         imatge = LlegeixFotoCamera(camera)
@@ -316,24 +322,23 @@ def SegueixFlor(CampFlors, camera):
             # Angle en str amb només 2 decimals
             Ang = "{:.2f}".format((Angle*360)/6.28)
             cv2.putText(imager, 'Angle: ' + Ang, (50, 240), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
-            cv2.imshow('Imatge amb posicio', imager)
+            if DEBUG:
+                if ImatgeCounter < 10:
+                    # Guarda imatge llegida a disk
+                    NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeAmbPosicio'
+                    GuardaImatge(imager, NomImatge)
+                    ImatgeCounter += 1 
+            else:
+                cv2.imshow('Imatge amb posicio', imager)
         
+        # Si estem en DEBUG només fem una vegada el procés
         if DEBUG:
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
-        
+            break
+            
         k = cv2.waitKey(5)
         if k == 27:
             break
-        elif k == ord('s'):
-            GuardaImatge(imatge, 'Software/Lector-posicio/Data/FotoOriginal')
-            GuardaImatge(imatgec, 'Software/Lector-posicio/Data/FotoCorregida')
-            GuardaImatge(imatget, 'Software/Lector-posicio/Data/FotoThreshold') 
-            if not (Posicio[0] == 0 and Posicio[1] == 0 and Distancia == 0 and Angle == 0):
-                GuardaImatge(imager, 'Software/Lector-posicio/Data/FotoPosicio')
     
-    if cap:
-        cap.release()
     cv2.destroyAllWindows()  
 
 # Per moure un cercle a la pantalla utilitzant el teclat i comprovar quina és la posició real calculada, per veure si coincideix amb la posició real

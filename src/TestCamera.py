@@ -8,10 +8,10 @@ from libcamera import controls
 import time  
 
 # Limits del camp de flors
-DOWN_LEFT = (100, 2500)
-DOWN_RIGHT = (4500, 2500)
-UP_LEFT = (100, 100)
-UP_RIGHT = (4500, 100)
+DOWN_LEFT = (60, 2500)
+DOWN_RIGHT = (4460, 2515)
+UP_LEFT = (10, 160)
+UP_RIGHT = (4470, 130)
 
 picam2 = Picamera2()
 camera_config = picam2.create_still_configuration(main={'format': 'BGR888', 'size': (4608, 2592)})
@@ -41,6 +41,7 @@ while True:
 
     cv2.imshow('Imatge', output)
     picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":focus})
+    picam2.configure(camera_config)
 
     # Espera que l'usuari premi una tecla
     k = cv2.waitKey(1)
