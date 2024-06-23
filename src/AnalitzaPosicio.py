@@ -48,9 +48,9 @@ def ActivaCamera():
         try:
             picam2 = Picamera2()
             camera_config = picam2.create_still_configuration(main={'format': 'BGR888', 'size': (4608, 2592)})
-            picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":FOCUS})
+            picam2.set_controls({"AfMode":controls.AfModeEnum.Manual, "LensPosition":FOCUS})
             picam2.configure(camera_config)
-            picam2.start()
+            picam2.start()            
         except IOError:
             LogError("ActivaCamera: No s'ha pogut obrir o accedir a la càmera.")
         except ValueError:
@@ -356,75 +356,6 @@ def SegueixFlor(CampFlors, camera):
     
     cv2.destroyAllWindows()  
 
-# Per moure un cercle a la pantalla utilitzant el teclat i comprovar quina és la posició real calculada, per veure si coincideix amb la posició real
-# Entrada: CampFlors: objecte FlowerField ja calibrat 
-# Sortida: cap (pantalla)
-def ComprovaPosicio(CampFlors):
-    # Carrega les dades de calibració de la càmera
-    cameraMatrix = pickle.load(open('Software/Calibracio-camera/cameraMatrix.pkl', 'rb'))
-    dist = pickle.load(open('Software/Calibracio-camera/dist.pkl', 'rb'))
-
-    cap = ActivaCamera()  
-    
-    Posicio = (100,1000)
-    Angle = 0
-
-    while True:
-        imatge = LlegeixFotoCamera(cap)
-                
-        imatgec = CorregeixImatge(imatge, cameraMatrix, dist)
-        
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        # Dibuixa la posició de la flor
-        imager = DibuixaPosicioFlor(imatgec, Posicio[0], Posicio[1], Angle)
-        PosicioReal = CampFlors.PixelXY2ReallXY(Posicio[0], Posicio[1])
-        cv2.putText(imager, 'X: ' + str(int(PosicioReal[0])), (50, 80), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
-        cv2.putText(imager, 'Y: ' + str(int(PosicioReal[1])), (50, 160), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
-        # Angle en str amb només 2 decimals
-        Ang = "{:.2f}".format((Angle*360)/6.28)
-        cv2.putText(imager, 'Angle: ' + Ang, (50, 240), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
-        cv2.imshow('Imatge amb posicio', imager)
-        
-        if DEBUG:
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
-        
-        k = cv2.waitKey(5)
-        # Mou la posició de la flor
-        # s: dreta
-        # a: esquerra
-        # w: amunt
-        # z: avall
-        # k: 10 píxels a la dreta
-        # j: 10 píxels a l'esquerra
-        # i: 10 píxels a dalt
-        # m: 10 píxels avall
-        if k == 27:
-            break
-        elif k == ord('s'):
-            Posicio = (Posicio[0]+1, Posicio[1])
-        elif k == ord('a'):
-            Posicio = (Posicio[0]-1, Posicio[1])
-        elif k == ord('w'):
-            Posicio = (Posicio[0], Posicio[1]-1)
-        elif k == ord('z'):
-            Posicio = (Posicio[0], Posicio[1]+1)
-        elif k == ord('k'):
-            Posicio = (Posicio[0]+10, Posicio[1])
-        elif k == ord('j'):
-            Posicio = (Posicio[0]-10, Posicio[1])
-        elif k == ord('i'):
-            Posicio = (Posicio[0], Posicio[1]-10)
-        elif k == ord('m'):
-            Posicio = (Posicio[0], Posicio[1]+10)
-        elif k == ord('g'):
-            GuardaImatge(imager, 'Software/Lector-posicio/Data/FotoPosicio')
- 
-                
-    
-    if cap:
-        cap.release()
-    cv2.destroyAllWindows()  
 ################################################ Utilitats ################################################
 # Funció que crea un log d'errors. Afegeix l'error passat al fitxer de log posant la data i hora
 # Entrada: error: missatge d'error
