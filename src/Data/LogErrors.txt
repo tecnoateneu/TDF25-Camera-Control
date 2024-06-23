@@ -1,4 +1,1000 @@
-2024-06-19 22:36:01 TrobaPosicioFlor: No s'han trobat 3 referències
-2024-06-19 22:36:10 TrobaPosicioFlor: No s'han trobat 3 referències
-2024-06-20 07:04:23 ActivaCamera: S'ha cridat a start quan la càmera ja està en ús o no està configurada correctament.
-2024-06-20 07:09:09 ActivaCamera: S'ha cridat a start quan la càmera ja està en ús o no està configurada correctament.
+2024-06-23 10:38:44.996 SegueixFlor: Inici del bucle
+2024-06-23 10:38:45.163 SegueixFlor: Posicio trobada
+2024-06-23 10:38:45.201 SegueixFlor: Inici del bucle
+2024-06-23 10:38:45.383 SegueixFlor: Posicio trobada
+2024-06-23 10:38:45.411 SegueixFlor: Inici del bucle
+2024-06-23 10:38:45.582 SegueixFlor: Posicio trobada
+2024-06-23 10:38:45.620 SegueixFlor: Inici del bucle
+2024-06-23 10:38:45.799 SegueixFlor: Posicio trobada
+2024-06-23 10:38:45.840 SegueixFlor: Inici del bucle
+2024-06-23 10:38:46.003 SegueixFlor: Posicio trobada
+2024-06-23 10:38:46.037 SegueixFlor: Inici del bucle
+2024-06-23 10:38:46.219 SegueixFlor: Posicio trobada
+2024-06-23 10:38:46.251 SegueixFlor: Inici del bucle
+2024-06-23 10:38:46.420 SegueixFlor: Posicio trobada
+2024-06-23 10:38:46.453 SegueixFlor: Inici del bucle
+2024-06-23 10:38:46.635 SegueixFlor: Posicio trobada
+2024-06-23 10:38:46.664 SegueixFlor: Inici del bucle
+2024-06-23 10:38:46.837 SegueixFlor: Posicio trobada
+2024-06-23 10:38:46.873 SegueixFlor: Inici del bucle
+2024-06-23 10:38:47.055 SegueixFlor: Posicio trobada
+2024-06-23 10:38:47.089 SegueixFlor: Inici del bucle
+2024-06-23 10:38:47.255 SegueixFlor: Posicio trobada
+2024-06-23 10:38:47.293 SegueixFlor: Inici del bucle
+2024-06-23 10:38:47.472 SegueixFlor: Posicio trobada
+2024-06-23 10:38:47.505 SegueixFlor: Inici del bucle
+2024-06-23 10:38:47.675 SegueixFlor: Posicio trobada
+2024-06-23 10:38:47.714 SegueixFlor: Inici del bucle
+2024-06-23 10:38:47.890 SegueixFlor: Posicio trobada
+2024-06-23 10:38:47.923 SegueixFlor: Inici del bucle
+2024-06-23 10:38:48.091 SegueixFlor: Posicio trobada
+2024-06-23 10:40:05.477 SegueixFlor: Inici del bucle
+2024-06-23 10:40:05.798 SegueixFlor: Posicio trobada
+2024-06-23 10:40:06.447 SegueixFlor: Inici del bucle
+2024-06-23 10:40:06.668 SegueixFlor: Posicio trobada
+2024-06-23 10:40:06.711 SegueixFlor: Inici del bucle
+2024-06-23 10:40:06.863 SegueixFlor: Posicio trobada
+2024-06-23 10:40:06.915 SegueixFlor: Inici del bucle
+2024-06-23 10:40:07.091 SegueixFlor: Posicio trobada
+2024-06-23 10:40:07.129 SegueixFlor: Inici del bucle
+2024-06-23 10:40:07.296 SegueixFlor: Posicio trobada
+2024-06-23 10:40:07.332 SegueixFlor: Inici del bucle
+2024-06-23 10:40:07.514 SegueixFlor: Posicio trobada
+2024-06-23 10:40:07.550 SegueixFlor: Inici del bucle
+2024-06-23 10:40:07.718 SegueixFlor: Posicio trobada
+2024-06-23 10:40:07.757 SegueixFlor: Inici del bucle
+2024-06-23 10:40:07.936 SegueixFlor: Posicio trobada
+2024-06-23 10:40:07.973 SegueixFlor: Inici del bucle
+2024-06-23 10:40:08.134 SegueixFlor: Posicio trobada
+2024-06-23 10:40:08.172 SegueixFlor: Inici del bucle
+2024-06-23 10:40:08.351 SegueixFlor: Posicio trobada
+2024-06-23 10:40:08.385 SegueixFlor: Inici del bucle
+2024-06-23 10:40:08.551 SegueixFlor: Posicio trobada
+2024-06-23 10:40:08.584 SegueixFlor: Inici del bucle
+2024-06-23 10:40:08.775 SegueixFlor: Posicio trobada
+2024-06-23 10:40:08.811 SegueixFlor: Inici del bucle
+2024-06-23 10:40:08.979 SegueixFlor: Posicio trobada
+2024-06-23 10:40:09.016 SegueixFlor: Inici del bucle
+2024-06-23 10:40:09.192 SegueixFlor: Posicio trobada
+2024-06-23 10:40:09.226 SegueixFlor: Inici del bucle
+2024-06-23 10:40:09.394 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:40:09.396 SegueixFlor: Posicio trobada
+2024-06-23 10:40:09.523 Flor no trobada
+2024-06-23 10:40:09.912 SegueixFlor: Inici del bucle
+2024-06-23 10:40:10.201 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:40:10.203 SegueixFlor: Posicio trobada
+2024-06-23 10:40:10.331 Flor no trobada
+2024-06-23 10:40:10.366 SegueixFlor: Inici del bucle
+2024-06-23 10:40:10.563 SegueixFlor: Posicio trobada
+2024-06-23 10:40:10.603 SegueixFlor: Inici del bucle
+2024-06-23 10:40:10.777 SegueixFlor: Posicio trobada
+2024-06-23 10:40:10.806 SegueixFlor: Inici del bucle
+2024-06-23 10:40:10.991 SegueixFlor: Posicio trobada
+2024-06-23 10:40:11.029 SegueixFlor: Inici del bucle
+2024-06-23 10:40:11.201 SegueixFlor: Posicio trobada
+2024-06-23 10:40:11.243 SegueixFlor: Inici del bucle
+2024-06-23 10:40:11.400 SegueixFlor: Posicio trobada
+2024-06-23 10:40:11.432 SegueixFlor: Inici del bucle
+2024-06-23 10:40:11.613 SegueixFlor: Posicio trobada
+2024-06-23 10:40:11.651 SegueixFlor: Inici del bucle
+2024-06-23 10:40:11.818 SegueixFlor: Posicio trobada
+2024-06-23 10:40:11.857 SegueixFlor: Inici del bucle
+2024-06-23 10:40:12.027 SegueixFlor: Posicio trobada
+2024-06-23 10:40:12.059 SegueixFlor: Inici del bucle
+2024-06-23 10:40:12.240 SegueixFlor: Posicio trobada
+2024-06-23 10:40:12.277 SegueixFlor: Inici del bucle
+2024-06-23 10:40:12.444 SegueixFlor: Posicio trobada
+2024-06-23 10:40:12.477 SegueixFlor: Inici del bucle
+2024-06-23 10:40:12.654 SegueixFlor: Posicio trobada
+2024-06-23 10:40:12.688 SegueixFlor: Inici del bucle
+2024-06-23 10:40:12.861 SegueixFlor: Posicio trobada
+2024-06-23 10:40:12.898 SegueixFlor: Inici del bucle
+2024-06-23 10:40:13.071 SegueixFlor: Posicio trobada
+2024-06-23 10:40:13.106 SegueixFlor: Inici del bucle
+2024-06-23 10:40:13.278 SegueixFlor: Posicio trobada
+2024-06-23 10:40:13.315 SegueixFlor: Inici del bucle
+2024-06-23 10:40:13.488 SegueixFlor: Posicio trobada
+2024-06-23 10:40:13.521 SegueixFlor: Inici del bucle
+2024-06-23 10:40:13.695 SegueixFlor: Posicio trobada
+2024-06-23 10:40:13.732 SegueixFlor: Inici del bucle
+2024-06-23 10:40:13.905 SegueixFlor: Posicio trobada
+2024-06-23 10:40:13.941 SegueixFlor: Inici del bucle
+2024-06-23 10:40:14.115 SegueixFlor: Posicio trobada
+2024-06-23 10:40:14.145 SegueixFlor: Inici del bucle
+2024-06-23 10:40:14.324 SegueixFlor: Posicio trobada
+2024-06-23 10:40:14.363 SegueixFlor: Inici del bucle
+2024-06-23 10:40:14.532 SegueixFlor: Posicio trobada
+2024-06-23 10:40:14.563 SegueixFlor: Inici del bucle
+2024-06-23 10:40:14.745 SegueixFlor: Posicio trobada
+2024-06-23 10:40:14.778 SegueixFlor: Inici del bucle
+2024-06-23 10:40:14.950 SegueixFlor: Posicio trobada
+2024-06-23 10:40:14.983 SegueixFlor: Inici del bucle
+2024-06-23 10:40:15.160 SegueixFlor: Posicio trobada
+2024-06-23 10:40:15.198 SegueixFlor: Inici del bucle
+2024-06-23 10:40:15.370 SegueixFlor: Posicio trobada
+2024-06-23 10:40:15.403 SegueixFlor: Inici del bucle
+2024-06-23 10:40:15.580 SegueixFlor: Posicio trobada
+2024-06-23 10:40:15.615 SegueixFlor: Inici del bucle
+2024-06-23 10:40:15.788 SegueixFlor: Posicio trobada
+2024-06-23 10:40:15.821 SegueixFlor: Inici del bucle
+2024-06-23 10:40:15.998 SegueixFlor: Posicio trobada
+2024-06-23 10:40:16.032 SegueixFlor: Inici del bucle
+2024-06-23 10:40:16.206 SegueixFlor: Posicio trobada
+2024-06-23 10:40:16.238 SegueixFlor: Inici del bucle
+2024-06-23 10:40:16.417 SegueixFlor: Posicio trobada
+2024-06-23 10:40:16.452 SegueixFlor: Inici del bucle
+2024-06-23 10:40:16.625 SegueixFlor: Posicio trobada
+2024-06-23 10:40:16.654 SegueixFlor: Inici del bucle
+2024-06-23 10:40:16.833 SegueixFlor: Posicio trobada
+2024-06-23 10:40:16.870 SegueixFlor: Inici del bucle
+2024-06-23 10:40:17.042 SegueixFlor: Posicio trobada
+2024-06-23 10:40:17.077 SegueixFlor: Inici del bucle
+2024-06-23 10:40:17.251 SegueixFlor: Posicio trobada
+2024-06-23 10:40:17.289 SegueixFlor: Inici del bucle
+2024-06-23 10:40:17.462 SegueixFlor: Posicio trobada
+2024-06-23 10:41:01.860 SegueixFlor: Inici del bucle
+2024-06-23 10:41:02.121 SegueixFlor: Posicio trobada
+2024-06-23 10:41:02.745 SegueixFlor: Inici del bucle
+2024-06-23 10:41:03.001 SegueixFlor: Posicio trobada
+2024-06-23 10:41:03.061 SegueixFlor: Inici del bucle
+2024-06-23 10:41:03.225 SegueixFlor: Posicio trobada
+2024-06-23 10:41:03.279 SegueixFlor: Inici del bucle
+2024-06-23 10:41:03.431 SegueixFlor: Posicio trobada
+2024-06-23 10:41:03.462 SegueixFlor: Inici del bucle
+2024-06-23 10:41:03.630 SegueixFlor: Posicio trobada
+2024-06-23 10:41:03.695 SegueixFlor: Inici del bucle
+2024-06-23 10:41:03.856 SegueixFlor: Posicio trobada
+2024-06-23 10:41:03.891 SegueixFlor: Inici del bucle
+2024-06-23 10:41:04.037 SegueixFlor: Posicio trobada
+2024-06-23 10:41:04.077 SegueixFlor: Inici del bucle
+2024-06-23 10:41:04.267 SegueixFlor: Posicio trobada
+2024-06-23 10:41:04.315 SegueixFlor: Inici del bucle
+2024-06-23 10:41:04.455 SegueixFlor: Posicio trobada
+2024-06-23 10:41:04.487 SegueixFlor: Inici del bucle
+2024-06-23 10:41:04.680 SegueixFlor: Posicio trobada
+2024-06-23 10:41:04.716 SegueixFlor: Inici del bucle
+2024-06-23 10:41:04.878 SegueixFlor: Posicio trobada
+2024-06-23 10:41:04.916 SegueixFlor: Inici del bucle
+2024-06-23 10:41:05.095 SegueixFlor: Posicio trobada
+2024-06-23 10:41:05.132 SegueixFlor: Inici del bucle
+2024-06-23 10:41:05.295 SegueixFlor: Posicio trobada
+2024-06-23 10:41:05.333 SegueixFlor: Inici del bucle
+2024-06-23 10:41:05.518 SegueixFlor: Posicio trobada
+2024-06-23 10:41:05.556 SegueixFlor: Inici del bucle
+2024-06-23 10:41:05.721 SegueixFlor: Posicio trobada
+2024-06-23 10:41:05.764 SegueixFlor: Inici del bucle
+2024-06-23 10:41:05.936 SegueixFlor: Posicio trobada
+2024-06-23 10:41:05.972 SegueixFlor: Inici del bucle
+2024-06-23 10:41:06.140 SegueixFlor: Posicio trobada
+2024-06-23 10:41:06.184 SegueixFlor: Inici del bucle
+2024-06-23 10:41:06.352 SegueixFlor: Posicio trobada
+2024-06-23 10:41:06.388 SegueixFlor: Inici del bucle
+2024-06-23 10:41:06.554 SegueixFlor: Posicio trobada
+2024-06-23 10:41:06.593 SegueixFlor: Inici del bucle
+2024-06-23 10:41:06.772 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:06.774 SegueixFlor: Posicio trobada
+2024-06-23 10:41:06.901 Flor no trobada
+2024-06-23 10:41:07.325 SegueixFlor: Inici del bucle
+2024-06-23 10:41:07.576 SegueixFlor: Posicio trobada
+2024-06-23 10:41:07.640 SegueixFlor: Inici del bucle
+2024-06-23 10:41:07.796 SegueixFlor: Posicio trobada
+2024-06-23 10:41:07.858 SegueixFlor: Inici del bucle
+2024-06-23 10:41:08.015 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:08.016 SegueixFlor: Posicio trobada
+2024-06-23 10:41:08.154 Flor no trobada
+2024-06-23 10:41:08.217 SegueixFlor: Inici del bucle
+2024-06-23 10:41:08.357 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:08.359 SegueixFlor: Posicio trobada
+2024-06-23 10:41:08.503 Flor no trobada
+2024-06-23 10:41:08.593 SegueixFlor: Inici del bucle
+2024-06-23 10:41:08.714 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:08.715 SegueixFlor: Posicio trobada
+2024-06-23 10:41:08.861 Flor no trobada
+2024-06-23 10:41:08.921 SegueixFlor: Inici del bucle
+2024-06-23 10:41:09.057 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:09.059 SegueixFlor: Posicio trobada
+2024-06-23 10:41:09.189 Flor no trobada
+2024-06-23 10:41:09.254 SegueixFlor: Inici del bucle
+2024-06-23 10:41:09.398 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:09.399 SegueixFlor: Posicio trobada
+2024-06-23 10:41:09.531 Flor no trobada
+2024-06-23 10:41:09.612 SegueixFlor: Inici del bucle
+2024-06-23 10:41:09.810 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 10:41:09.812 SegueixFlor: Posicio trobada
+2024-06-23 10:41:09.975 Flor no trobada
+2024-06-23 10:41:10.044 SegueixFlor: Inici del bucle
+2024-06-23 10:41:10.235 SegueixFlor: Posicio trobada
+2024-06-23 10:41:10.271 SegueixFlor: Inici del bucle
+2024-06-23 10:41:10.448 SegueixFlor: Posicio trobada
+2024-06-23 10:41:10.521 SegueixFlor: Inici del bucle
+2024-06-23 10:41:10.693 SegueixFlor: Posicio trobada
+2024-06-23 10:41:10.751 SegueixFlor: Inici del bucle
+2024-06-23 10:41:10.929 SegueixFlor: Posicio trobada
+2024-06-23 10:41:10.974 SegueixFlor: Inici del bucle
+2024-06-23 10:41:11.142 SegueixFlor: Posicio trobada
+2024-06-23 10:41:11.173 SegueixFlor: Inici del bucle
+2024-06-23 10:41:11.349 SegueixFlor: Posicio trobada
+2024-06-23 10:41:11.384 SegueixFlor: Inici del bucle
+2024-06-23 10:41:11.603 SegueixFlor: Posicio trobada
+2024-06-23 10:41:11.645 SegueixFlor: Inici del bucle
+2024-06-23 10:41:11.821 SegueixFlor: Posicio trobada
+2024-06-23 10:41:11.866 SegueixFlor: Inici del bucle
+2024-06-23 10:41:12.045 SegueixFlor: Posicio trobada
+2024-06-23 10:41:12.081 SegueixFlor: Inici del bucle
+2024-06-23 10:41:12.254 SegueixFlor: Posicio trobada
+2024-06-23 10:41:12.287 SegueixFlor: Inici del bucle
+2024-06-23 10:41:12.462 SegueixFlor: Posicio trobada
+2024-06-23 10:41:12.499 SegueixFlor: Inici del bucle
+2024-06-23 10:41:12.672 SegueixFlor: Posicio trobada
+2024-06-23 10:41:12.702 SegueixFlor: Inici del bucle
+2024-06-23 10:41:12.881 SegueixFlor: Posicio trobada
+2024-06-23 10:41:12.911 SegueixFlor: Inici del bucle
+2024-06-23 10:41:13.090 SegueixFlor: Posicio trobada
+2024-06-23 10:41:13.125 SegueixFlor: Inici del bucle
+2024-06-23 10:41:13.298 SegueixFlor: Posicio trobada
+2024-06-23 10:41:13.341 SegueixFlor: Inici del bucle
+2024-06-23 10:41:13.510 SegueixFlor: Posicio trobada
+2024-06-23 10:41:13.545 SegueixFlor: Inici del bucle
+2024-06-23 10:41:13.717 SegueixFlor: Posicio trobada
+2024-06-23 10:41:13.753 SegueixFlor: Inici del bucle
+2024-06-23 10:41:13.926 SegueixFlor: Posicio trobada
+2024-06-23 10:41:13.960 SegueixFlor: Inici del bucle
+2024-06-23 10:41:14.138 SegueixFlor: Posicio trobada
+2024-06-23 10:41:14.176 SegueixFlor: Inici del bucle
+2024-06-23 10:41:14.345 SegueixFlor: Posicio trobada
+2024-06-23 10:41:14.375 SegueixFlor: Inici del bucle
+2024-06-23 10:41:14.553 SegueixFlor: Posicio trobada
+2024-06-23 10:41:14.582 SegueixFlor: Inici del bucle
+2024-06-23 10:41:14.762 SegueixFlor: Posicio trobada
+2024-06-23 10:41:14.793 SegueixFlor: Inici del bucle
+2024-06-23 10:41:14.970 SegueixFlor: Posicio trobada
+2024-06-23 10:41:15.007 SegueixFlor: Inici del bucle
+2024-06-23 10:41:15.180 SegueixFlor: Posicio trobada
+2024-06-23 10:41:15.212 SegueixFlor: Inici del bucle
+2024-06-23 10:41:15.398 SegueixFlor: Posicio trobada
+2024-06-23 16:54:21.081 SegueixFlor: Inici del bucle
+2024-06-23 16:54:21.809 SegueixFlor: Posicio trobada
+2024-06-23 16:55:21.587 SegueixFlor: Inici del bucle
+2024-06-23 16:55:22.331 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 16:55:22.332 SegueixFlor: Posicio trobada
+2024-06-23 16:55:22.456 Flor no trobada
+2024-06-23 16:57:56.243 SegueixFlor: Inici del bucle
+2024-06-23 16:57:56.987 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 16:57:56.988 SegueixFlor: Posicio trobada
+2024-06-23 16:57:57.113 Flor no trobada
+2024-06-23 17:00:54.015 SegueixFlor: Inici del bucle
+2024-06-23 17:00:54.750 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:00:54.752 SegueixFlor: Posicio trobada
+2024-06-23 17:00:54.880 Flor no trobada
+2024-06-23 17:06:42.903 SegueixFlor: Inici del bucle
+2024-06-23 17:06:43.632 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:06:43.633 SegueixFlor: Posicio trobada
+2024-06-23 17:06:43.758 Flor no trobada
+2024-06-23 17:28:13.154 SegueixFlor: Inici del bucle
+2024-06-23 17:28:27.268 ActivaCamera: S'ha cridat a start quan la càmera ja està en ús o no està configurada correctament.
+2024-06-23 17:28:43.197 SegueixFlor: Inici del bucle
+2024-06-23 17:28:44.003 SegueixFlor: Posicio trobada
+2024-06-23 17:29:05.545 SegueixFlor: Inici del bucle
+2024-06-23 17:29:06.332 SegueixFlor: Posicio trobada
+2024-06-23 17:37:23.838 SegueixFlor: Inici del bucle
+2024-06-23 17:37:24.148 SegueixFlor: Posicio trobada
+2024-06-23 17:37:24.152 SegueixFlor: Inici del bucle
+2024-06-23 17:37:24.372 SegueixFlor: Posicio trobada
+2024-06-23 17:37:24.377 SegueixFlor: Inici del bucle
+2024-06-23 17:37:24.610 SegueixFlor: Posicio trobada
+2024-06-23 17:37:24.614 SegueixFlor: Inici del bucle
+2024-06-23 17:37:24.846 SegueixFlor: Posicio trobada
+2024-06-23 17:37:24.850 SegueixFlor: Inici del bucle
+2024-06-23 17:37:25.152 SegueixFlor: Posicio trobada
+2024-06-23 17:37:25.157 SegueixFlor: Inici del bucle
+2024-06-23 17:37:25.447 SegueixFlor: Posicio trobada
+2024-06-23 17:37:25.450 SegueixFlor: Inici del bucle
+2024-06-23 17:37:25.680 SegueixFlor: Posicio trobada
+2024-06-23 17:37:25.686 SegueixFlor: Inici del bucle
+2024-06-23 17:37:25.929 SegueixFlor: Posicio trobada
+2024-06-23 17:37:25.932 SegueixFlor: Inici del bucle
+2024-06-23 17:37:26.171 SegueixFlor: Posicio trobada
+2024-06-23 17:37:26.176 SegueixFlor: Inici del bucle
+2024-06-23 17:37:26.414 SegueixFlor: Posicio trobada
+2024-06-23 17:37:26.416 SegueixFlor: Inici del bucle
+2024-06-23 17:37:26.648 SegueixFlor: Posicio trobada
+2024-06-23 17:37:26.654 SegueixFlor: Inici del bucle
+2024-06-23 17:37:26.897 SegueixFlor: Posicio trobada
+2024-06-23 17:37:26.900 SegueixFlor: Inici del bucle
+2024-06-23 17:37:27.129 SegueixFlor: Posicio trobada
+2024-06-23 17:37:27.135 SegueixFlor: Inici del bucle
+2024-06-23 17:37:27.378 SegueixFlor: Posicio trobada
+2024-06-23 17:37:27.381 SegueixFlor: Inici del bucle
+2024-06-23 17:37:27.615 SegueixFlor: Posicio trobada
+2024-06-23 17:37:27.620 SegueixFlor: Inici del bucle
+2024-06-23 17:37:27.861 SegueixFlor: Posicio trobada
+2024-06-23 17:37:27.863 SegueixFlor: Inici del bucle
+2024-06-23 17:37:28.094 SegueixFlor: Posicio trobada
+2024-06-23 17:37:28.099 SegueixFlor: Inici del bucle
+2024-06-23 17:37:28.343 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:28.344 SegueixFlor: Posicio trobada
+2024-06-23 17:37:28.471 Flor no trobada
+2024-06-23 17:37:28.473 SegueixFlor: Inici del bucle
+2024-06-23 17:37:28.577 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:28.579 SegueixFlor: Posicio trobada
+2024-06-23 17:37:28.707 Flor no trobada
+2024-06-23 17:37:28.715 SegueixFlor: Inici del bucle
+2024-06-23 17:37:28.822 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:28.824 SegueixFlor: Posicio trobada
+2024-06-23 17:37:28.949 Flor no trobada
+2024-06-23 17:37:28.959 SegueixFlor: Inici del bucle
+2024-06-23 17:37:29.057 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:29.059 SegueixFlor: Posicio trobada
+2024-06-23 17:37:29.184 Flor no trobada
+2024-06-23 17:37:29.192 SegueixFlor: Inici del bucle
+2024-06-23 17:37:29.299 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:29.300 SegueixFlor: Posicio trobada
+2024-06-23 17:37:29.425 Flor no trobada
+2024-06-23 17:37:29.434 SegueixFlor: Inici del bucle
+2024-06-23 17:37:29.539 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:29.541 SegueixFlor: Posicio trobada
+2024-06-23 17:37:29.666 Flor no trobada
+2024-06-23 17:37:29.673 SegueixFlor: Inici del bucle
+2024-06-23 17:37:29.792 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:29.794 SegueixFlor: Posicio trobada
+2024-06-23 17:37:29.921 Flor no trobada
+2024-06-23 17:37:29.930 SegueixFlor: Inici del bucle
+2024-06-23 17:37:30.023 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:30.025 SegueixFlor: Posicio trobada
+2024-06-23 17:37:30.177 Flor no trobada
+2024-06-23 17:37:30.184 SegueixFlor: Inici del bucle
+2024-06-23 17:37:30.283 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:30.285 SegueixFlor: Posicio trobada
+2024-06-23 17:37:30.409 Flor no trobada
+2024-06-23 17:37:30.416 SegueixFlor: Inici del bucle
+2024-06-23 17:37:30.623 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:30.625 SegueixFlor: Posicio trobada
+2024-06-23 17:37:30.750 Flor no trobada
+2024-06-23 17:37:30.757 SegueixFlor: Inici del bucle
+2024-06-23 17:37:30.865 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:30.867 SegueixFlor: Posicio trobada
+2024-06-23 17:37:30.991 Flor no trobada
+2024-06-23 17:37:30.999 SegueixFlor: Inici del bucle
+2024-06-23 17:37:31.106 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:31.108 SegueixFlor: Posicio trobada
+2024-06-23 17:37:31.233 Flor no trobada
+2024-06-23 17:37:31.240 SegueixFlor: Inici del bucle
+2024-06-23 17:37:31.347 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:31.349 SegueixFlor: Posicio trobada
+2024-06-23 17:37:31.474 Flor no trobada
+2024-06-23 17:37:31.481 SegueixFlor: Inici del bucle
+2024-06-23 17:37:31.588 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:31.590 SegueixFlor: Posicio trobada
+2024-06-23 17:37:31.714 Flor no trobada
+2024-06-23 17:37:31.721 SegueixFlor: Inici del bucle
+2024-06-23 17:37:31.829 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:31.831 SegueixFlor: Posicio trobada
+2024-06-23 17:37:31.956 Flor no trobada
+2024-06-23 17:37:31.963 SegueixFlor: Inici del bucle
+2024-06-23 17:37:32.071 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:32.072 SegueixFlor: Posicio trobada
+2024-06-23 17:37:32.198 Flor no trobada
+2024-06-23 17:37:32.205 SegueixFlor: Inici del bucle
+2024-06-23 17:37:32.312 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:32.313 SegueixFlor: Posicio trobada
+2024-06-23 17:37:32.438 Flor no trobada
+2024-06-23 17:37:32.446 SegueixFlor: Inici del bucle
+2024-06-23 17:37:32.553 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:32.554 SegueixFlor: Posicio trobada
+2024-06-23 17:37:32.679 Flor no trobada
+2024-06-23 17:37:32.686 SegueixFlor: Inici del bucle
+2024-06-23 17:37:32.799 SegueixFlor: Posicio trobada
+2024-06-23 17:37:32.802 SegueixFlor: Inici del bucle
+2024-06-23 17:37:33.035 SegueixFlor: Posicio trobada
+2024-06-23 17:37:33.042 SegueixFlor: Inici del bucle
+2024-06-23 17:37:33.285 SegueixFlor: Posicio trobada
+2024-06-23 17:37:33.288 SegueixFlor: Inici del bucle
+2024-06-23 17:37:33.519 SegueixFlor: Posicio trobada
+2024-06-23 17:37:33.525 SegueixFlor: Inici del bucle
+2024-06-23 17:37:33.780 SegueixFlor: Posicio trobada
+2024-06-23 17:37:33.783 SegueixFlor: Inici del bucle
+2024-06-23 17:37:34.004 SegueixFlor: Posicio trobada
+2024-06-23 17:37:34.006 SegueixFlor: Inici del bucle
+2024-06-23 17:37:34.240 SegueixFlor: Posicio trobada
+2024-06-23 17:37:34.242 SegueixFlor: Inici del bucle
+2024-06-23 17:37:34.482 SegueixFlor: Posicio trobada
+2024-06-23 17:37:34.485 SegueixFlor: Inici del bucle
+2024-06-23 17:37:34.722 SegueixFlor: Posicio trobada
+2024-06-23 17:37:34.725 SegueixFlor: Inici del bucle
+2024-06-23 17:37:34.964 SegueixFlor: Posicio trobada
+2024-06-23 17:37:34.967 SegueixFlor: Inici del bucle
+2024-06-23 17:37:35.205 SegueixFlor: Posicio trobada
+2024-06-23 17:37:35.207 SegueixFlor: Inici del bucle
+2024-06-23 17:37:35.447 SegueixFlor: Posicio trobada
+2024-06-23 17:37:35.449 SegueixFlor: Inici del bucle
+2024-06-23 17:37:35.687 SegueixFlor: Posicio trobada
+2024-06-23 17:37:35.689 SegueixFlor: Inici del bucle
+2024-06-23 17:37:35.928 SegueixFlor: Posicio trobada
+2024-06-23 17:37:35.931 SegueixFlor: Inici del bucle
+2024-06-23 17:37:36.171 SegueixFlor: Posicio trobada
+2024-06-23 17:37:36.173 SegueixFlor: Inici del bucle
+2024-06-23 17:37:36.411 SegueixFlor: Posicio trobada
+2024-06-23 17:37:36.414 SegueixFlor: Inici del bucle
+2024-06-23 17:37:36.651 SegueixFlor: Posicio trobada
+2024-06-23 17:37:36.654 SegueixFlor: Inici del bucle
+2024-06-23 17:37:36.894 SegueixFlor: Posicio trobada
+2024-06-23 17:37:36.896 SegueixFlor: Inici del bucle
+2024-06-23 17:37:37.134 SegueixFlor: Posicio trobada
+2024-06-23 17:37:37.136 SegueixFlor: Inici del bucle
+2024-06-23 17:37:37.376 SegueixFlor: Posicio trobada
+2024-06-23 17:37:37.379 SegueixFlor: Inici del bucle
+2024-06-23 17:37:37.617 SegueixFlor: Posicio trobada
+2024-06-23 17:37:37.619 SegueixFlor: Inici del bucle
+2024-06-23 17:37:37.859 SegueixFlor: Posicio trobada
+2024-06-23 17:37:37.862 SegueixFlor: Inici del bucle
+2024-06-23 17:37:38.130 SegueixFlor: Posicio trobada
+2024-06-23 17:37:38.134 SegueixFlor: Inici del bucle
+2024-06-23 17:37:38.408 SegueixFlor: Posicio trobada
+2024-06-23 17:37:38.410 SegueixFlor: Inici del bucle
+2024-06-23 17:37:38.708 SegueixFlor: Posicio trobada
+2024-06-23 17:37:38.711 SegueixFlor: Inici del bucle
+2024-06-23 17:37:39.053 SegueixFlor: Posicio trobada
+2024-06-23 17:37:39.060 SegueixFlor: Inici del bucle
+2024-06-23 17:37:39.313 SegueixFlor: Posicio trobada
+2024-06-23 17:37:39.315 SegueixFlor: Inici del bucle
+2024-06-23 17:37:39.549 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:39.550 SegueixFlor: Posicio trobada
+2024-06-23 17:37:39.676 Flor no trobada
+2024-06-23 17:37:39.684 SegueixFlor: Inici del bucle
+2024-06-23 17:37:39.794 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:39.796 SegueixFlor: Posicio trobada
+2024-06-23 17:37:39.921 Flor no trobada
+2024-06-23 17:37:39.928 SegueixFlor: Inici del bucle
+2024-06-23 17:37:40.036 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:40.037 SegueixFlor: Posicio trobada
+2024-06-23 17:37:40.165 Flor no trobada
+2024-06-23 17:37:40.172 SegueixFlor: Inici del bucle
+2024-06-23 17:37:40.284 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:40.287 SegueixFlor: Posicio trobada
+2024-06-23 17:37:40.418 Flor no trobada
+2024-06-23 17:37:40.425 SegueixFlor: Inici del bucle
+2024-06-23 17:37:40.753 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:37:40.754 SegueixFlor: Posicio trobada
+2024-06-23 17:37:40.879 Flor no trobada
+2024-06-23 17:37:40.885 SegueixFlor: Inici del bucle
+2024-06-23 17:37:40.994 SegueixFlor: Posicio trobada
+2024-06-23 17:37:40.997 SegueixFlor: Inici del bucle
+2024-06-23 17:37:41.236 SegueixFlor: Posicio trobada
+2024-06-23 17:37:41.239 SegueixFlor: Inici del bucle
+2024-06-23 17:37:41.476 SegueixFlor: Posicio trobada
+2024-06-23 17:37:41.479 SegueixFlor: Inici del bucle
+2024-06-23 17:37:41.717 SegueixFlor: Posicio trobada
+2024-06-23 17:37:41.720 SegueixFlor: Inici del bucle
+2024-06-23 17:37:41.958 SegueixFlor: Posicio trobada
+2024-06-23 17:37:41.960 SegueixFlor: Inici del bucle
+2024-06-23 17:37:42.200 SegueixFlor: Posicio trobada
+2024-06-23 17:37:42.203 SegueixFlor: Inici del bucle
+2024-06-23 17:37:42.440 SegueixFlor: Posicio trobada
+2024-06-23 17:37:42.443 SegueixFlor: Inici del bucle
+2024-06-23 17:37:42.682 SegueixFlor: Posicio trobada
+2024-06-23 17:37:42.685 SegueixFlor: Inici del bucle
+2024-06-23 17:37:42.923 SegueixFlor: Posicio trobada
+2024-06-23 17:37:42.925 SegueixFlor: Inici del bucle
+2024-06-23 17:37:43.165 SegueixFlor: Posicio trobada
+2024-06-23 17:37:43.168 SegueixFlor: Inici del bucle
+2024-06-23 17:38:11.602 SegueixFlor: Inici del bucle
+2024-06-23 17:38:11.915 SegueixFlor: Posicio trobada
+2024-06-23 17:38:11.919 SegueixFlor: Inici del bucle
+2024-06-23 17:38:12.333 SegueixFlor: Posicio trobada
+2024-06-23 17:38:12.337 SegueixFlor: Inici del bucle
+2024-06-23 17:38:12.618 SegueixFlor: Posicio trobada
+2024-06-23 17:38:12.622 SegueixFlor: Inici del bucle
+2024-06-23 17:38:12.851 SegueixFlor: Posicio trobada
+2024-06-23 17:38:12.857 SegueixFlor: Inici del bucle
+2024-06-23 17:38:13.086 SegueixFlor: Posicio trobada
+2024-06-23 17:38:13.091 SegueixFlor: Inici del bucle
+2024-06-23 17:38:13.333 SegueixFlor: Posicio trobada
+2024-06-23 17:38:13.335 SegueixFlor: Inici del bucle
+2024-06-23 17:38:13.567 SegueixFlor: Posicio trobada
+2024-06-23 17:38:13.573 SegueixFlor: Inici del bucle
+2024-06-23 17:38:13.820 SegueixFlor: Posicio trobada
+2024-06-23 17:38:13.823 SegueixFlor: Inici del bucle
+2024-06-23 17:38:14.052 SegueixFlor: Posicio trobada
+2024-06-23 17:38:14.058 SegueixFlor: Inici del bucle
+2024-06-23 17:38:14.300 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:38:14.302 SegueixFlor: Posicio trobada
+2024-06-23 17:38:47.663 Flor no trobada
+2024-06-23 17:39:50.791 SegueixFlor: Inici del bucle
+2024-06-23 17:39:50.991 SegueixFlor: Posicio trobada
+2024-06-23 17:39:50.994 SegueixFlor: Inici del bucle
+2024-06-23 17:39:51.235 SegueixFlor: Posicio trobada
+2024-06-23 17:39:51.238 SegueixFlor: Inici del bucle
+2024-06-23 17:39:51.469 SegueixFlor: Posicio trobada
+2024-06-23 17:39:51.474 SegueixFlor: Inici del bucle
+2024-06-23 17:39:51.717 SegueixFlor: Posicio trobada
+2024-06-23 17:39:51.719 SegueixFlor: Inici del bucle
+2024-06-23 17:39:51.956 SegueixFlor: Posicio trobada
+2024-06-23 17:39:51.961 SegueixFlor: Inici del bucle
+2024-06-23 17:39:52.201 SegueixFlor: Posicio trobada
+2024-06-23 17:39:52.204 SegueixFlor: Inici del bucle
+2024-06-23 17:39:52.434 SegueixFlor: Posicio trobada
+2024-06-23 17:39:52.439 SegueixFlor: Inici del bucle
+2024-06-23 17:39:52.682 SegueixFlor: Posicio trobada
+2024-06-23 17:39:52.684 SegueixFlor: Inici del bucle
+2024-06-23 17:39:52.920 SegueixFlor: Posicio trobada
+2024-06-23 17:39:52.925 SegueixFlor: Inici del bucle
+2024-06-23 17:39:53.236 SegueixFlor: Posicio trobada
+2024-06-23 17:39:53.240 SegueixFlor: Inici del bucle
+2024-06-23 17:39:53.517 SegueixFlor: Posicio trobada
+2024-06-23 17:39:53.522 SegueixFlor: Inici del bucle
+2024-06-23 17:39:53.768 SegueixFlor: Posicio trobada
+2024-06-23 17:39:53.770 SegueixFlor: Inici del bucle
+2024-06-23 17:39:54.002 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:39:54.003 SegueixFlor: Posicio trobada
+2024-06-23 17:40:04.473 Flor no trobada
+2024-06-23 17:40:04.474 SegueixFlor: Inici del bucle
+2024-06-23 17:40:04.612 SegueixFlor: Posicio trobada
+2024-06-23 17:40:04.615 SegueixFlor: Inici del bucle
+2024-06-23 17:40:04.929 SegueixFlor: Posicio trobada
+2024-06-23 17:40:04.931 SegueixFlor: Inici del bucle
+2024-06-23 17:40:05.212 SegueixFlor: Posicio trobada
+2024-06-23 17:40:05.215 SegueixFlor: Inici del bucle
+2024-06-23 17:40:05.454 SegueixFlor: Posicio trobada
+2024-06-23 17:40:05.457 SegueixFlor: Inici del bucle
+2024-06-23 17:40:05.694 SegueixFlor: Posicio trobada
+2024-06-23 17:40:05.697 SegueixFlor: Inici del bucle
+2024-06-23 17:40:05.935 SegueixFlor: Posicio trobada
+2024-06-23 17:40:05.938 SegueixFlor: Inici del bucle
+2024-06-23 17:40:06.177 SegueixFlor: Posicio trobada
+2024-06-23 17:40:06.180 SegueixFlor: Inici del bucle
+2024-06-23 17:40:06.418 SegueixFlor: Posicio trobada
+2024-06-23 17:40:06.421 SegueixFlor: Inici del bucle
+2024-06-23 17:40:06.661 SegueixFlor: Posicio trobada
+2024-06-23 17:40:06.664 SegueixFlor: Inici del bucle
+2024-06-23 17:40:06.902 SegueixFlor: Posicio trobada
+2024-06-23 17:40:06.905 SegueixFlor: Inici del bucle
+2024-06-23 17:40:07.142 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:40:07.144 SegueixFlor: Posicio trobada
+2024-06-23 17:41:22.111 Flor no trobada
+2024-06-23 17:41:56.692 SegueixFlor: Inici del bucle
+2024-06-23 17:41:56.930 SegueixFlor: Posicio trobada
+2024-06-23 17:43:01.289 SegueixFlor: Inici del bucle
+2024-06-23 17:43:01.682 SegueixFlor: Posicio trobada
+2024-06-23 17:43:01.686 SegueixFlor: Inici del bucle
+2024-06-23 17:43:01.945 SegueixFlor: Posicio trobada
+2024-06-23 17:43:01.949 SegueixFlor: Inici del bucle
+2024-06-23 17:43:02.182 SegueixFlor: Posicio trobada
+2024-06-23 17:43:02.186 SegueixFlor: Inici del bucle
+2024-06-23 17:43:02.416 SegueixFlor: Posicio trobada
+2024-06-23 17:43:02.419 SegueixFlor: Inici del bucle
+2024-06-23 17:43:02.653 SegueixFlor: Posicio trobada
+2024-06-23 17:43:02.658 SegueixFlor: Inici del bucle
+2024-06-23 17:43:02.901 SegueixFlor: Posicio trobada
+2024-06-23 17:43:02.904 SegueixFlor: Inici del bucle
+2024-06-23 17:43:03.135 SegueixFlor: Posicio trobada
+2024-06-23 17:43:03.140 SegueixFlor: Inici del bucle
+2024-06-23 17:43:03.383 SegueixFlor: Posicio trobada
+2024-06-23 17:43:03.386 SegueixFlor: Inici del bucle
+2024-06-23 17:43:03.616 SegueixFlor: Posicio trobada
+2024-06-23 17:43:03.621 SegueixFlor: Inici del bucle
+2024-06-23 17:43:03.864 SegueixFlor: Posicio trobada
+2024-06-23 17:43:03.866 SegueixFlor: Inici del bucle
+2024-06-23 17:43:04.099 SegueixFlor: Posicio trobada
+2024-06-23 17:43:04.104 SegueixFlor: Inici del bucle
+2024-06-23 17:43:04.347 SegueixFlor: Posicio trobada
+2024-06-23 17:43:04.349 SegueixFlor: Inici del bucle
+2024-06-23 17:43:04.578 SegueixFlor: Posicio trobada
+2024-06-23 17:43:04.583 SegueixFlor: Inici del bucle
+2024-06-23 17:43:04.829 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:04.831 SegueixFlor: Posicio trobada
+2024-06-23 17:43:04.955 Flor no trobada
+2024-06-23 17:43:04.957 SegueixFlor: Inici del bucle
+2024-06-23 17:43:05.072 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:05.074 SegueixFlor: Posicio trobada
+2024-06-23 17:43:05.201 Flor no trobada
+2024-06-23 17:43:05.209 SegueixFlor: Inici del bucle
+2024-06-23 17:43:05.317 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:05.318 SegueixFlor: Posicio trobada
+2024-06-23 17:43:05.446 Flor no trobada
+2024-06-23 17:43:05.454 SegueixFlor: Inici del bucle
+2024-06-23 17:43:05.560 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:05.561 SegueixFlor: Posicio trobada
+2024-06-23 17:43:05.687 Flor no trobada
+2024-06-23 17:43:05.697 SegueixFlor: Inici del bucle
+2024-06-23 17:43:06.026 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:06.027 SegueixFlor: Posicio trobada
+2024-06-23 17:43:06.154 Flor no trobada
+2024-06-23 17:43:06.162 SegueixFlor: Inici del bucle
+2024-06-23 17:43:06.278 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:06.279 SegueixFlor: Posicio trobada
+2024-06-23 17:43:06.406 Flor no trobada
+2024-06-23 17:43:06.413 SegueixFlor: Inici del bucle
+2024-06-23 17:43:06.519 SegueixFlor: Posicio trobada
+2024-06-23 17:43:06.522 SegueixFlor: Inici del bucle
+2024-06-23 17:43:06.772 SegueixFlor: Posicio trobada
+2024-06-23 17:43:06.777 SegueixFlor: Inici del bucle
+2024-06-23 17:43:07.001 SegueixFlor: Posicio trobada
+2024-06-23 17:43:07.003 SegueixFlor: Inici del bucle
+2024-06-23 17:43:07.231 SegueixFlor: Posicio trobada
+2024-06-23 17:43:07.236 SegueixFlor: Inici del bucle
+2024-06-23 17:43:07.482 SegueixFlor: Posicio trobada
+2024-06-23 17:43:07.484 SegueixFlor: Inici del bucle
+2024-06-23 17:43:07.717 SegueixFlor: Posicio trobada
+2024-06-23 17:43:07.722 SegueixFlor: Inici del bucle
+2024-06-23 17:43:07.965 SegueixFlor: Posicio trobada
+2024-06-23 17:43:07.968 SegueixFlor: Inici del bucle
+2024-06-23 17:43:08.201 SegueixFlor: Posicio trobada
+2024-06-23 17:43:08.210 SegueixFlor: Inici del bucle
+2024-06-23 17:43:08.448 SegueixFlor: Posicio trobada
+2024-06-23 17:43:08.451 SegueixFlor: Inici del bucle
+2024-06-23 17:43:08.681 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:08.683 SegueixFlor: Posicio trobada
+2024-06-23 17:43:08.810 Flor no trobada
+2024-06-23 17:43:08.817 SegueixFlor: Inici del bucle
+2024-06-23 17:43:08.932 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:08.933 SegueixFlor: Posicio trobada
+2024-06-23 17:43:09.059 Flor no trobada
+2024-06-23 17:43:09.066 SegueixFlor: Inici del bucle
+2024-06-23 17:43:09.173 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:09.176 SegueixFlor: Posicio trobada
+2024-06-23 17:43:09.311 Flor no trobada
+2024-06-23 17:43:09.322 SegueixFlor: Inici del bucle
+2024-06-23 17:43:09.642 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:09.643 SegueixFlor: Posicio trobada
+2024-06-23 17:43:09.768 Flor no trobada
+2024-06-23 17:43:09.776 SegueixFlor: Inici del bucle
+2024-06-23 17:43:09.892 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:43:09.894 SegueixFlor: Posicio trobada
+2024-06-23 17:43:10.021 Flor no trobada
+2024-06-23 17:43:10.028 SegueixFlor: Inici del bucle
+2024-06-23 17:43:10.137 SegueixFlor: Posicio trobada
+2024-06-23 17:43:10.139 SegueixFlor: Inici del bucle
+2024-06-23 17:43:10.367 SegueixFlor: Posicio trobada
+2024-06-23 17:43:10.369 SegueixFlor: Inici del bucle
+2024-06-23 17:43:10.607 SegueixFlor: Posicio trobada
+2024-06-23 17:43:10.610 SegueixFlor: Inici del bucle
+2024-06-23 17:43:10.849 SegueixFlor: Posicio trobada
+2024-06-23 17:43:10.851 SegueixFlor: Inici del bucle
+2024-06-23 17:43:11.090 SegueixFlor: Posicio trobada
+2024-06-23 17:43:11.093 SegueixFlor: Inici del bucle
+2024-06-23 17:43:11.331 SegueixFlor: Posicio trobada
+2024-06-23 17:43:11.334 SegueixFlor: Inici del bucle
+2024-06-23 17:43:11.571 SegueixFlor: Posicio trobada
+2024-06-23 17:43:11.574 SegueixFlor: Inici del bucle
+2024-06-23 17:43:11.824 SegueixFlor: Posicio trobada
+2024-06-23 17:43:11.827 SegueixFlor: Inici del bucle
+2024-06-23 17:43:12.055 SegueixFlor: Posicio trobada
+2024-06-23 17:43:12.058 SegueixFlor: Inici del bucle
+2024-06-23 17:43:12.295 SegueixFlor: Posicio trobada
+2024-06-23 17:43:12.297 SegueixFlor: Inici del bucle
+2024-06-23 17:43:12.536 SegueixFlor: Posicio trobada
+2024-06-23 17:43:12.538 SegueixFlor: Inici del bucle
+2024-06-23 17:43:12.779 SegueixFlor: Posicio trobada
+2024-06-23 17:43:12.781 SegueixFlor: Inici del bucle
+2024-06-23 17:43:13.018 SegueixFlor: Posicio trobada
+2024-06-23 17:43:13.021 SegueixFlor: Inici del bucle
+2024-06-23 17:43:13.261 SegueixFlor: Posicio trobada
+2024-06-23 17:43:13.266 SegueixFlor: Inici del bucle
+2024-06-23 17:43:13.502 SegueixFlor: Posicio trobada
+2024-06-23 17:43:13.505 SegueixFlor: Inici del bucle
+2024-06-23 17:43:13.742 SegueixFlor: Posicio trobada
+2024-06-23 17:43:13.744 SegueixFlor: Inici del bucle
+2024-06-23 17:43:13.983 SegueixFlor: Posicio trobada
+2024-06-23 17:43:13.986 SegueixFlor: Inici del bucle
+2024-06-23 17:43:14.224 SegueixFlor: Posicio trobada
+2024-06-23 17:43:14.227 SegueixFlor: Inici del bucle
+2024-06-23 17:43:14.464 SegueixFlor: Posicio trobada
+2024-06-23 17:43:14.467 SegueixFlor: Inici del bucle
+2024-06-23 17:43:14.707 SegueixFlor: Posicio trobada
+2024-06-23 17:43:14.709 SegueixFlor: Inici del bucle
+2024-06-23 17:43:14.948 SegueixFlor: Posicio trobada
+2024-06-23 17:43:14.951 SegueixFlor: Inici del bucle
+2024-06-23 17:43:15.188 SegueixFlor: Posicio trobada
+2024-06-23 17:43:15.191 SegueixFlor: Inici del bucle
+2024-06-23 17:43:15.429 SegueixFlor: Posicio trobada
+2024-06-23 17:43:15.432 SegueixFlor: Inici del bucle
+2024-06-23 17:43:15.671 SegueixFlor: Posicio trobada
+2024-06-23 17:43:15.673 SegueixFlor: Inici del bucle
+2024-06-23 17:43:15.911 SegueixFlor: Posicio trobada
+2024-06-23 17:43:15.913 SegueixFlor: Inici del bucle
+2024-06-23 17:43:16.155 SegueixFlor: Posicio trobada
+2024-06-23 17:43:16.157 SegueixFlor: Inici del bucle
+2024-06-23 17:43:16.394 SegueixFlor: Posicio trobada
+2024-06-23 17:43:16.397 SegueixFlor: Inici del bucle
+2024-06-23 17:43:16.635 SegueixFlor: Posicio trobada
+2024-06-23 17:43:16.638 SegueixFlor: Inici del bucle
+2024-06-23 17:43:16.878 SegueixFlor: Posicio trobada
+2024-06-23 17:43:16.882 SegueixFlor: Inici del bucle
+2024-06-23 17:43:17.177 SegueixFlor: Posicio trobada
+2024-06-23 17:43:17.181 SegueixFlor: Inici del bucle
+2024-06-23 17:43:17.480 SegueixFlor: Posicio trobada
+2024-06-23 17:43:17.483 SegueixFlor: Inici del bucle
+2024-06-23 17:43:17.722 SegueixFlor: Posicio trobada
+2024-06-23 17:43:17.724 SegueixFlor: Inici del bucle
+2024-06-23 17:43:17.962 SegueixFlor: Posicio trobada
+2024-06-23 17:43:17.964 SegueixFlor: Inici del bucle
+2024-06-23 17:43:18.204 SegueixFlor: Posicio trobada
+2024-06-23 17:43:18.206 SegueixFlor: Inici del bucle
+2024-06-23 17:43:18.445 SegueixFlor: Posicio trobada
+2024-06-23 17:43:18.450 SegueixFlor: Inici del bucle
+2024-06-23 17:43:18.687 SegueixFlor: Posicio trobada
+2024-06-23 17:43:18.689 SegueixFlor: Inici del bucle
+2024-06-23 17:43:18.927 SegueixFlor: Posicio trobada
+2024-06-23 17:43:18.929 SegueixFlor: Inici del bucle
+2024-06-23 17:43:19.167 SegueixFlor: Posicio trobada
+2024-06-23 17:43:19.170 SegueixFlor: Inici del bucle
+2024-06-23 17:43:19.409 SegueixFlor: Posicio trobada
+2024-06-23 17:43:19.412 SegueixFlor: Inici del bucle
+2024-06-23 17:43:19.650 SegueixFlor: Posicio trobada
+2024-06-23 17:43:19.653 SegueixFlor: Inici del bucle
+2024-06-23 17:43:19.897 SegueixFlor: Posicio trobada
+2024-06-23 17:43:19.901 SegueixFlor: Inici del bucle
+2024-06-23 17:43:20.151 SegueixFlor: Posicio trobada
+2024-06-23 17:43:20.155 SegueixFlor: Inici del bucle
+2024-06-23 17:43:20.393 SegueixFlor: Posicio trobada
+2024-06-23 17:43:20.395 SegueixFlor: Inici del bucle
+2024-06-23 17:43:20.618 SegueixFlor: Posicio trobada
+2024-06-23 17:43:20.620 SegueixFlor: Inici del bucle
+2024-06-23 17:43:20.857 SegueixFlor: Posicio trobada
+2024-06-23 17:43:20.860 SegueixFlor: Inici del bucle
+2024-06-23 17:43:21.101 SegueixFlor: Posicio trobada
+2024-06-23 17:43:21.104 SegueixFlor: Inici del bucle
+2024-06-23 17:43:21.339 SegueixFlor: Posicio trobada
+2024-06-23 17:43:21.343 SegueixFlor: Inici del bucle
+2024-06-23 17:43:21.587 SegueixFlor: Posicio trobada
+2024-06-23 17:43:21.589 SegueixFlor: Inici del bucle
+2024-06-23 17:43:21.822 SegueixFlor: Posicio trobada
+2024-06-23 17:43:21.826 SegueixFlor: Inici del bucle
+2024-06-23 17:43:22.068 SegueixFlor: Posicio trobada
+2024-06-23 17:43:22.070 SegueixFlor: Inici del bucle
+2024-06-23 17:43:22.338 SegueixFlor: Posicio trobada
+2024-06-23 17:43:22.341 SegueixFlor: Inici del bucle
+2024-06-23 17:43:22.666 SegueixFlor: Posicio trobada
+2024-06-23 17:43:22.668 SegueixFlor: Inici del bucle
+2024-06-23 17:43:22.907 SegueixFlor: Posicio trobada
+2024-06-23 17:43:22.909 SegueixFlor: Inici del bucle
+2024-06-23 17:43:23.147 SegueixFlor: Posicio trobada
+2024-06-23 17:43:23.150 SegueixFlor: Inici del bucle
+2024-06-23 17:43:23.391 SegueixFlor: Posicio trobada
+2024-06-23 17:43:23.394 SegueixFlor: Inici del bucle
+2024-06-23 17:43:23.631 SegueixFlor: Posicio trobada
+2024-06-23 17:43:23.637 SegueixFlor: Inici del bucle
+2024-06-23 17:43:23.876 SegueixFlor: Posicio trobada
+2024-06-23 17:43:23.878 SegueixFlor: Inici del bucle
+2024-06-23 17:43:24.114 SegueixFlor: Posicio trobada
+2024-06-23 17:43:24.117 SegueixFlor: Inici del bucle
+2024-06-23 17:43:24.367 SegueixFlor: Posicio trobada
+2024-06-23 17:43:24.371 SegueixFlor: Inici del bucle
+2024-06-23 17:43:24.644 SegueixFlor: Posicio trobada
+2024-06-23 17:43:24.648 SegueixFlor: Inici del bucle
+2024-06-23 17:43:24.980 SegueixFlor: Posicio trobada
+2024-06-23 17:43:24.984 SegueixFlor: Inici del bucle
+2024-06-23 17:43:25.202 SegueixFlor: Posicio trobada
+2024-06-23 17:43:25.205 SegueixFlor: Inici del bucle
+2024-06-23 17:43:25.478 SegueixFlor: Posicio trobada
+2024-06-23 17:43:25.482 SegueixFlor: Inici del bucle
+2024-06-23 17:43:25.818 SegueixFlor: Posicio trobada
+2024-06-23 17:43:25.820 SegueixFlor: Inici del bucle
+2024-06-23 17:43:26.042 SegueixFlor: Posicio trobada
+2024-06-23 17:43:26.044 SegueixFlor: Inici del bucle
+2024-06-23 17:43:26.282 SegueixFlor: Posicio trobada
+2024-06-23 17:43:26.285 SegueixFlor: Inici del bucle
+2024-06-23 17:43:26.522 SegueixFlor: Posicio trobada
+2024-06-23 17:43:26.525 SegueixFlor: Inici del bucle
+2024-06-23 17:44:21.798 SegueixFlor: Inici del bucle
+2024-06-23 17:44:22.108 SegueixFlor: Posicio trobada
+2024-06-23 17:44:22.747 SegueixFlor: Inici del bucle
+2024-06-23 17:44:23.077 SegueixFlor: Posicio trobada
+2024-06-23 17:44:23.136 SegueixFlor: Inici del bucle
+2024-06-23 17:44:23.306 SegueixFlor: Posicio trobada
+2024-06-23 17:44:23.336 SegueixFlor: Inici del bucle
+2024-06-23 17:44:23.526 SegueixFlor: Posicio trobada
+2024-06-23 17:44:23.561 SegueixFlor: Inici del bucle
+2024-06-23 17:44:23.788 SegueixFlor: Posicio trobada
+2024-06-23 17:44:23.827 SegueixFlor: Inici del bucle
+2024-06-23 17:44:24.132 SegueixFlor: Posicio trobada
+2024-06-23 17:44:24.169 SegueixFlor: Inici del bucle
+2024-06-23 17:44:24.366 SegueixFlor: Posicio trobada
+2024-06-23 17:44:24.398 SegueixFlor: Inici del bucle
+2024-06-23 17:44:24.619 SegueixFlor: Posicio trobada
+2024-06-23 17:44:24.654 SegueixFlor: Inici del bucle
+2024-06-23 17:44:24.852 SegueixFlor: Posicio trobada
+2024-06-23 17:44:24.889 SegueixFlor: Inici del bucle
+2024-06-23 17:44:25.104 SegueixFlor: Posicio trobada
+2024-06-23 17:44:25.131 SegueixFlor: Inici del bucle
+2024-06-23 17:44:25.332 SegueixFlor: Posicio trobada
+2024-06-23 17:44:25.367 SegueixFlor: Inici del bucle
+2024-06-23 17:44:25.581 SegueixFlor: Posicio trobada
+2024-06-23 17:44:25.612 SegueixFlor: Inici del bucle
+2024-06-23 17:44:25.815 SegueixFlor: Posicio trobada
+2024-06-23 17:44:25.857 SegueixFlor: Inici del bucle
+2024-06-23 17:44:26.063 SegueixFlor: Posicio trobada
+2024-06-23 17:44:26.097 SegueixFlor: Inici del bucle
+2024-06-23 17:44:26.300 SegueixFlor: Posicio trobada
+2024-06-23 17:44:26.335 SegueixFlor: Inici del bucle
+2024-06-23 17:44:26.547 SegueixFlor: Posicio trobada
+2024-06-23 17:44:26.579 SegueixFlor: Inici del bucle
+2024-06-23 17:44:26.779 SegueixFlor: Posicio trobada
+2024-06-23 17:44:26.815 SegueixFlor: Inici del bucle
+2024-06-23 17:44:27.028 SegueixFlor: Posicio trobada
+2024-06-23 17:44:27.058 SegueixFlor: Inici del bucle
+2024-06-23 17:44:27.264 SegueixFlor: Posicio trobada
+2024-06-23 17:44:27.306 SegueixFlor: Inici del bucle
+2024-06-23 17:44:27.517 SegueixFlor: Posicio trobada
+2024-06-23 17:44:27.553 SegueixFlor: Inici del bucle
+2024-06-23 17:44:27.744 SegueixFlor: Posicio trobada
+2024-06-23 17:44:27.784 SegueixFlor: Inici del bucle
+2024-06-23 17:44:27.994 SegueixFlor: Posicio trobada
+2024-06-23 17:44:28.026 SegueixFlor: Inici del bucle
+2024-06-23 17:44:28.225 SegueixFlor: Posicio trobada
+2024-06-23 17:44:28.265 SegueixFlor: Inici del bucle
+2024-06-23 17:44:28.474 SegueixFlor: Posicio trobada
+2024-06-23 17:44:28.508 SegueixFlor: Inici del bucle
+2024-06-23 17:44:28.707 SegueixFlor: Posicio trobada
+2024-06-23 17:44:28.741 SegueixFlor: Inici del bucle
+2024-06-23 17:44:28.971 SegueixFlor: Posicio trobada
+2024-06-23 17:44:29.009 SegueixFlor: Inici del bucle
+2024-06-23 17:44:29.192 SegueixFlor: Posicio trobada
+2024-06-23 17:44:29.229 SegueixFlor: Inici del bucle
+2024-06-23 17:44:29.439 SegueixFlor: Posicio trobada
+2024-06-23 17:44:29.469 SegueixFlor: Inici del bucle
+2024-06-23 17:44:29.671 SegueixFlor: Posicio trobada
+2024-06-23 17:44:29.705 SegueixFlor: Inici del bucle
+2024-06-23 17:44:29.922 SegueixFlor: Posicio trobada
+2024-06-23 17:44:29.957 SegueixFlor: Inici del bucle
+2024-06-23 17:44:30.153 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:44:30.156 SegueixFlor: Posicio trobada
+2024-06-23 17:44:30.289 Flor no trobada
+2024-06-23 17:44:30.729 SegueixFlor: Inici del bucle
+2024-06-23 17:44:30.955 TrobaPosicioFlor: No s'han trobat 3 referències
+2024-06-23 17:44:30.957 SegueixFlor: Posicio trobada
+2024-06-23 17:44:31.083 Flor no trobada
+2024-06-23 17:44:31.133 SegueixFlor: Inici del bucle
+2024-06-23 17:44:31.247 SegueixFlor: Posicio trobada
+2024-06-23 17:44:31.287 SegueixFlor: Inici del bucle
+2024-06-23 17:44:31.481 SegueixFlor: Posicio trobada
+2024-06-23 17:44:31.519 SegueixFlor: Inici del bucle
+2024-06-23 17:44:31.726 SegueixFlor: Posicio trobada
+2024-06-23 17:44:31.764 SegueixFlor: Inici del bucle
+2024-06-23 17:44:31.963 SegueixFlor: Posicio trobada
+2024-06-23 17:44:32.005 SegueixFlor: Inici del bucle
+2024-06-23 17:44:32.209 SegueixFlor: Posicio trobada
+2024-06-23 17:44:32.243 SegueixFlor: Inici del bucle
+2024-06-23 17:44:32.441 SegueixFlor: Posicio trobada
+2024-06-23 17:44:32.477 SegueixFlor: Inici del bucle
+2024-06-23 17:44:32.691 SegueixFlor: Posicio trobada
+2024-06-23 17:44:32.722 SegueixFlor: Inici del bucle
+2024-06-23 17:44:32.923 SegueixFlor: Posicio trobada
+2024-06-23 17:44:32.959 SegueixFlor: Inici del bucle
+2024-06-23 17:44:33.173 SegueixFlor: Posicio trobada
+2024-06-23 17:44:33.205 SegueixFlor: Inici del bucle
+2024-06-23 17:44:33.406 SegueixFlor: Posicio trobada
+2024-06-23 17:44:33.438 SegueixFlor: Inici del bucle
+2024-06-23 17:44:33.655 SegueixFlor: Posicio trobada
+2024-06-23 17:44:33.687 SegueixFlor: Inici del bucle
+2024-06-23 17:44:33.891 SegueixFlor: Posicio trobada
+2024-06-23 17:44:33.927 SegueixFlor: Inici del bucle
+2024-06-23 17:44:34.137 SegueixFlor: Posicio trobada
+2024-06-23 17:44:34.171 SegueixFlor: Inici del bucle
+2024-06-23 17:44:34.369 SegueixFlor: Posicio trobada
+2024-06-23 17:44:34.406 SegueixFlor: Inici del bucle
+2024-06-23 17:44:34.620 SegueixFlor: Posicio trobada
+2024-06-23 17:44:34.654 SegueixFlor: Inici del bucle
+2024-06-23 17:44:34.853 SegueixFlor: Posicio trobada
+2024-06-23 17:44:34.886 SegueixFlor: Inici del bucle
+2024-06-23 17:44:35.103 SegueixFlor: Posicio trobada
+2024-06-23 17:44:35.137 SegueixFlor: Inici del bucle
+2024-06-23 17:44:35.335 SegueixFlor: Posicio trobada
+2024-06-23 17:44:35.373 SegueixFlor: Inici del bucle
+2024-06-23 17:44:35.585 SegueixFlor: Posicio trobada
+2024-06-23 17:44:35.615 SegueixFlor: Inici del bucle
+2024-06-23 17:44:35.817 SegueixFlor: Posicio trobada
+2024-06-23 17:44:35.852 SegueixFlor: Inici del bucle
+2024-06-23 17:44:36.066 SegueixFlor: Posicio trobada
+2024-06-23 17:44:36.100 SegueixFlor: Inici del bucle
+2024-06-23 17:44:36.302 SegueixFlor: Posicio trobada
+2024-06-23 17:44:36.334 SegueixFlor: Inici del bucle
+2024-06-23 17:44:36.552 SegueixFlor: Posicio trobada
+2024-06-23 17:44:36.587 SegueixFlor: Inici del bucle
+2024-06-23 17:44:36.782 SegueixFlor: Posicio trobada
+2024-06-23 17:44:36.820 SegueixFlor: Inici del bucle
+2024-06-23 17:44:37.031 SegueixFlor: Posicio trobada
+2024-06-23 17:44:37.064 SegueixFlor: Inici del bucle
+2024-06-23 17:44:37.264 SegueixFlor: Posicio trobada
+2024-06-23 17:44:37.300 SegueixFlor: Inici del bucle
+2024-06-23 17:44:37.514 SegueixFlor: Posicio trobada
+2024-06-23 17:44:37.544 SegueixFlor: Inici del bucle
+2024-06-23 17:44:37.746 SegueixFlor: Posicio trobada
+2024-06-23 17:44:37.777 SegueixFlor: Inici del bucle
+2024-06-23 17:44:37.998 SegueixFlor: Posicio trobada
+2024-06-23 17:44:38.032 SegueixFlor: Inici del bucle
+2024-06-23 17:44:38.229 SegueixFlor: Posicio trobada
+2024-06-23 17:44:38.265 SegueixFlor: Inici del bucle
+2024-06-23 17:44:38.478 SegueixFlor: Posicio trobada
+2024-06-23 17:44:38.508 SegueixFlor: Inici del bucle
+2024-06-23 17:44:38.711 SegueixFlor: Posicio trobada
+2024-06-23 17:44:38.746 SegueixFlor: Inici del bucle
+2024-06-23 17:44:38.975 SegueixFlor: Posicio trobada
+2024-06-23 17:44:39.005 SegueixFlor: Inici del bucle
+2024-06-23 17:44:39.192 SegueixFlor: Posicio trobada
+2024-06-23 17:44:39.224 SegueixFlor: Inici del bucle
+2024-06-23 17:44:39.442 SegueixFlor: Posicio trobada
+2024-06-23 17:44:39.478 SegueixFlor: Inici del bucle
+2024-06-23 17:44:39.676 SegueixFlor: Posicio trobada
+2024-06-23 17:44:39.713 SegueixFlor: Inici del bucle
+2024-06-23 17:44:39.926 SegueixFlor: Posicio trobada
+2024-06-23 17:44:39.957 SegueixFlor: Inici del bucle
+2024-06-23 17:44:40.157 SegueixFlor: Posicio trobada
+2024-06-23 17:44:40.192 SegueixFlor: Inici del bucle
+2024-06-23 17:44:40.408 SegueixFlor: Posicio trobada
+2024-06-23 17:44:40.444 SegueixFlor: Inici del bucle
+2024-06-23 17:44:40.639 SegueixFlor: Posicio trobada
+2024-06-23 17:44:40.675 SegueixFlor: Inici del bucle
+2024-06-23 17:44:40.889 SegueixFlor: Posicio trobada
+2024-06-23 17:44:40.920 SegueixFlor: Inici del bucle
+2024-06-23 17:44:41.123 SegueixFlor: Posicio trobada
+2024-06-23 17:44:41.159 SegueixFlor: Inici del bucle
+2024-06-23 17:44:41.371 SegueixFlor: Posicio trobada
+2024-06-23 17:44:41.407 SegueixFlor: Inici del bucle
+2024-06-23 17:44:41.605 SegueixFlor: Posicio trobada
+2024-06-23 17:44:41.641 SegueixFlor: Inici del bucle
+2024-06-23 17:44:41.855 SegueixFlor: Posicio trobada
+2024-06-23 17:44:41.885 SegueixFlor: Inici del bucle
+2024-06-23 17:44:42.086 SegueixFlor: Posicio trobada
+2024-06-23 17:44:42.126 SegueixFlor: Inici del bucle
+2024-06-23 17:44:42.338 SegueixFlor: Posicio trobada
+2024-06-23 17:44:42.374 SegueixFlor: Inici del bucle
+2024-06-23 17:44:42.571 SegueixFlor: Posicio trobada
+2024-06-23 17:44:42.609 SegueixFlor: Inici del bucle
+2024-06-23 17:44:42.821 SegueixFlor: Posicio trobada
+2024-06-23 17:44:42.853 SegueixFlor: Inici del bucle
+2024-06-23 17:44:43.054 SegueixFlor: Posicio trobada
+2024-06-23 17:44:43.091 SegueixFlor: Inici del bucle
+2024-06-23 17:44:43.302 SegueixFlor: Posicio trobada
+2024-06-23 17:44:43.339 SegueixFlor: Inici del bucle
+2024-06-23 17:44:43.533 SegueixFlor: Posicio trobada
+2024-06-23 17:44:43.571 SegueixFlor: Inici del bucle
+2024-06-23 17:44:43.784 SegueixFlor: Posicio trobada
+2024-06-23 17:44:43.820 SegueixFlor: Inici del bucle
+2024-06-23 17:44:44.024 SegueixFlor: Posicio trobada
+2024-06-23 17:44:44.068 SegueixFlor: Inici del bucle
+2024-06-23 17:44:44.266 SegueixFlor: Posicio trobada
+2024-06-23 17:44:44.299 SegueixFlor: Inici del bucle
+2024-06-23 17:44:44.499 SegueixFlor: Posicio trobada
+2024-06-23 17:44:44.531 SegueixFlor: Inici del bucle
+2024-06-23 17:44:44.747 SegueixFlor: Posicio trobada
+2024-06-23 17:44:44.781 SegueixFlor: Inici del bucle
+2024-06-23 17:44:44.980 SegueixFlor: Posicio trobada
+2024-06-23 17:44:45.016 SegueixFlor: Inici del bucle
+2024-06-23 17:44:45.231 SegueixFlor: Posicio trobada
+2024-06-23 17:44:45.261 SegueixFlor: Inici del bucle
+2024-06-23 17:44:45.508 SegueixFlor: Posicio trobada
+2024-06-23 17:44:45.560 SegueixFlor: Inici del bucle
+2024-06-23 17:44:45.834 SegueixFlor: Posicio trobada
+2024-06-23 17:44:45.875 SegueixFlor: Inici del bucle
+2024-06-23 17:44:46.066 SegueixFlor: Posicio trobada
+2024-06-23 17:44:46.120 SegueixFlor: Inici del bucle
+2024-06-23 17:44:46.317 SegueixFlor: Posicio trobada
+2024-06-23 17:44:46.344 SegueixFlor: Inici del bucle
+2024-06-23 17:44:46.550 SegueixFlor: Posicio trobada
+2024-06-23 17:44:46.612 SegueixFlor: Inici del bucle
+2024-06-23 17:44:46.800 SegueixFlor: Posicio trobada
+2024-06-23 17:44:46.829 SegueixFlor: Inici del bucle
+2024-06-23 17:44:47.034 SegueixFlor: Posicio trobada
+2024-06-23 17:44:47.074 SegueixFlor: Inici del bucle
+2024-06-23 17:44:47.285 SegueixFlor: Posicio trobada
+2024-06-23 17:44:47.317 SegueixFlor: Inici del bucle
+2024-06-23 17:44:47.514 SegueixFlor: Posicio trobada
+2024-06-23 17:44:47.546 SegueixFlor: Inici del bucle
+2024-06-23 17:44:47.764 SegueixFlor: Posicio trobada
+2024-06-23 17:44:47.797 SegueixFlor: Inici del bucle
+2024-06-23 17:44:47.995 SegueixFlor: Posicio trobada
+2024-06-23 17:44:48.033 SegueixFlor: Inici del bucle
+2024-06-23 17:44:48.247 SegueixFlor: Posicio trobada
+2024-06-23 17:44:48.278 SegueixFlor: Inici del bucle
+2024-06-23 17:44:48.507 SegueixFlor: Posicio trobada
+2024-06-23 17:44:48.586 SegueixFlor: Inici del bucle
+2024-06-23 17:44:48.733 SegueixFlor: Posicio trobada
+2024-06-23 17:44:48.813 SegueixFlor: Inici del bucle
+2024-06-23 17:44:48.998 SegueixFlor: Posicio trobada
+2024-06-23 17:44:49.100 SegueixFlor: Inici del bucle
+2024-06-23 17:44:49.450 SegueixFlor: Posicio trobada
+2024-06-23 17:44:49.528 SegueixFlor: Inici del bucle
+2024-06-23 17:44:49.708 SegueixFlor: Posicio trobada
+2024-06-23 17:44:49.765 SegueixFlor: Inici del bucle
+2024-06-23 17:44:50.056 SegueixFlor: Posicio trobada

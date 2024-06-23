@@ -11,6 +11,7 @@ from libcamera import controls
 
 DEBUG = False
 LLEGEIX_CAMERA = True
+FILTRE_IR = True # Si True, és que porta filtre IR posat
 FOCUS = 0.0
 
 # Limits del camp de flors en píxels
@@ -53,16 +54,22 @@ def ActivaCamera():
             picam2.start()            
         except IOError:
             LogError("ActivaCamera: No s'ha pogut obrir o accedir a la càmera.")
+            return None
         except ValueError:
             LogError("ActivaCamera: S'han proporcionat paràmetres no vàlids a create_still_configuration o configure.")
+            return None
         except RuntimeError:
             LogError("ActivaCamera: S'ha cridat a start quan la càmera ja està en ús o no està configurada correctament.")
+            return None
         except Exception as e:
             LogError(f"ActivaCamera: S'ha produït un error inesperat: {str(e)}")
+            return None
         time.sleep(2)
-        while not (picam2.autofocus_cycle()):              # Espera a càmera enfocada
-            print('Càmera desenfocada')
-            time.sleep(0.1)
+        if not FILTRE_IR:
+            while not (picam2.autofocus_cycle()):              # Espera a càmera enfocada
+                print('Càmera desenfocada')
+                time.sleep(0.1)
+        
         return picam2
     else:
         return None
@@ -255,7 +262,9 @@ def TrobaPosicioFlor(imatge, CampFlors):
 
     # Troba l'angle de la línia que uneix punt_mig i el tercer centre
     try:
-        angle = math.atan((centres[3-centres_mes_propers[0]-centres_mes_propers[1]][0]-punt_mig[0])/(centres[3-centres_mes_propers[0]-centres_mes_propers[1]][1]-punt_mig[1]))
+        dy = (punt_mig[1]-centres[3-centres_mes_propers[0]-centres_mes_propers[1]][1])
+        dx = -(punt_mig[0]-centres[3-centres_mes_propers[0]-centres_mes_propers[1]][0])
+        angle = math.atan2(dy, dx)
     except ZeroDivisionError:
         angle = 0
     
@@ -286,8 +295,8 @@ def DibuixaPosicioFlor(imatge, x, y, angle):
     cv2.circle(imatge, (x, y), 100, (255, 255, 255), 2)
 
     # Dibuixa una línia a la inclinació de la flor
-    x2 = int(x + 200 * math.sin(angle))
-    y2 = int(y + 200 * math.cos(angle))
+    x2 = int(x + 200 * math.cos(angle))
+    y2 = int(y - 200 * math.sin(angle))
     cv2.line(imatge, (x, y), (x2, y2), (255, 255, 255), 2)
     
     if DEBUG:
@@ -323,12 +332,13 @@ def SegueixFlor(CampFlors, camera):
         font = cv2.FONT_HERSHEY_SIMPLEX
         if (Posicio[0] == 0 and Posicio[1] == 0 and Distancia == 0 and Angle == 0):
             # No s'ha trobat la flor
-            cv2.putText(imatget, 'No s\'ha trobat flor', (50, 60), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
+            cv2.putText(imatget, 'No s\'ha trobat flor' + str(loop), (50, 60), font, 3, (255, 255, 255), 2, cv2.LINE_AA)
             # Guarda imatge llegida a disk
             NomImatge = str(ImatgeCounter).zfill(3) + 'ImatgeNoFlorTrobada'
             GuardaImatge(imatget, NomImatge)
             LogError('Flor no trobada')
             if not DEBUG:
+                print('Flor no trobada')
                 cv2.imshow('Imatge sense flor', imatget)
         else:
             # Dibuixa la posició de la flor
@@ -383,9 +393,12 @@ def main():
     os.chdir('/home/pi/Documents/TDF25-Camera-Control')
     
     Camera = ActivaCamera()
-    CampFlors = FlowerField()
-    SegueixFlor(CampFlors, Camera)
-    DesactivaCamera(Camera)
+    if Camera is None:
+        print ('Main: No s\'ha pogut obrir la càmera')
+    else:
+        CampFlors = FlowerField()
+        SegueixFlor(CampFlors, Camera)
+        DesactivaCamera(Camera)
     #ComprovaPosicio(CampFlors)
      
    
