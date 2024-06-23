@@ -9,7 +9,7 @@ from picamera2 import Picamera2
 from libcamera import controls
 
 
-DEBUG = True
+DEBUG = False
 LLEGEIX_CAMERA = True
 FOCUS = 0.0
 
@@ -312,11 +312,13 @@ def SegueixFlor(CampFlors, camera):
     global ImatgeCounter
     
     while True:
+        LogError('SegueixFlor: Inici del bucle')
         imatge = LlegeixFotoCamera(camera)
                 
         imatget = ThresholdImatge(imatge)
         
         Posicio, Distancia, Angle = TrobaPosicioFlor(imatget, CampFlors)
+        LogError('SegueixFlor: Posicio trobada')
 
         font = cv2.FONT_HERSHEY_SIMPLEX
         if (Posicio[0] == 0 and Posicio[1] == 0 and Distancia == 0 and Angle == 0):
@@ -360,9 +362,20 @@ def SegueixFlor(CampFlors, camera):
 # Funció que crea un log d'errors. Afegeix l'error passat al fitxer de log posant la data i hora
 # Entrada: error: missatge d'error
 def LogError(error):
-    data = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    data = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
     with open('src/Data/LogErrors.txt', 'a') as f:
         f.write(data + ' ' + error + '\n')
+
+    # Comprova si el fitxer de log té més de 1000 entrades
+    with open('src/Data/LogErrors.txt', 'r') as f:
+        lines = f.readlines()
+        if len(lines) > 1000:
+            # Elimina les entrades més antigues per mantenir només les 1000 entrades més recents
+            lines = lines[-1000:]
+    
+    # Reescriu el fitxer de log amb les 1000 entrades més recents
+    with open('src/Data/LogErrors.txt', 'w') as f:
+        f.writelines(lines)
 
 ################################################ Funció principal ################################################
 def main():
