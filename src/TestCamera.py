@@ -3,8 +3,6 @@
 # Ensenya la imatge de la càmera i es pot canviar el focus de la càmera
 
 import cv2
-from picamera2 import Picamera2
-from libcamera import controls
 import time  
 
 # Limits del camp de flors
@@ -13,52 +11,46 @@ DOWN_RIGHT = (4460, 2515)
 UP_LEFT = (10, 160)
 UP_RIGHT = (4470, 130)
 
-picam2 = Picamera2()
-camera_config = picam2.create_still_configuration(main={'format': 'BGR888', 'size': (4608, 2592)})
-#picam2.set_controls({"AfMode":controls.AfModeEnum.Continuous})         # Autofocus
-picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":0.0})
-picam2.configure(camera_config)
-picam2.start()
-time.sleep(2)
+cap = cv2.VideoCapture('rtsp://admin:Holaquetal@192.168.1.163:554/cam/realmonitor?channel=1&subtype=0')
 
-focus = float(0)
+# Check if the camera opened successfully
+if not cap.isOpened():
+    print("ActivaCamera: No s/'ha pogut obrir la càmera.")
+    exit()
+
+ret, frame = cap.read()
 
 while True:
-#   while not (picam2.autofocus_cycle()):              # Espera a càmera enfocada quan autofocus
-#        print('Càmera desenfocada')
-#        time.sleep(0.1)
-    output = picam2.capture_array()                     # Captura la imatge 
-    output = cv2.cvtColor(output, cv2.COLOR_BGR2GRAY)   # Converteix la imatge a escala de grisos
+    #print HH:MM:SS:MS
+    current_time_ms = int(time.time() * 1000)
+    print(f"Current time: {current_time_ms} ms")
+    ret, frame = cap.read()
+    current_time_ms = int(time.time() * 1000)
+    print(f"Current time: {current_time_ms} ms")
+    
+    if not ret:
+        print("LlegeixFotoCamera: No s'ha pogut capturar imatge.")
+        
+    output = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)   # Converteix la imatge a escala de grisos
 
-    #Visualitza valor de focus
-    cv2.putText(output, 'Focus: ' + str(focus), (200, 200), cv2.FONT_HERSHEY_SIMPLEX, 5, (0, 0, 0), 2, cv2.LINE_AA)
 
     #Dibuixa el camp
-    cv2.line(output, DOWN_LEFT, DOWN_RIGHT, (255, 255, 255), 4)
-    cv2.line(output, DOWN_LEFT, UP_LEFT, (255, 255, 255), 4)
-    cv2.line(output, UP_LEFT, UP_RIGHT, (255, 255, 255), 4)
-    cv2.line(output, UP_RIGHT, DOWN_RIGHT, (255, 255, 255), 4)
+    # cv2.line(output, DOWN_LEFT, DOWN_RIGHT, (255, 255, 255), 4)
+    # cv2.line(output, DOWN_LEFT, UP_LEFT, (255, 255, 255), 4)
+    # cv2.line(output, UP_LEFT, UP_RIGHT, (255, 255, 255), 4)
+    # cv2.line(output, UP_RIGHT, DOWN_RIGHT, (255, 255, 255), 4)
 
     cv2.imshow('Imatge', output)
-    picam2.set_controls({"AfMode":controls.AfModeEnum.Manual,"LensPosition":focus})
     
     # Espera que l'usuari premi una tecla
     k = cv2.waitKey(1)
     if k == 27:  # 27 és el codi ASCII per a la tecla 'esc'
         break
-    elif k == ord('q'):
-        focus = focus + 0.1
-        cv2.imshow('Imatge', 0)
-    elif k == ord('a'):
-        focus = focus - 0.1
-    elif k == ord('w'):
-        focus = focus + 0.01
     elif k == ord('s'):
-        focus = focus - 0.01
-    if focus < 0:
-        focus = 0
-    # Arrodoneix a 2 decimals
-    focus = round(focus, 2)
+            if not cv2.imwrite('src/Data/ImatgeCamera.png', output):
+                print('Error al gravar la imatge.')
+            else:
+                print('Imatge gravada')
 
 cv2.destroyAllWindows()
-picam2.stop()
+cap.release()
